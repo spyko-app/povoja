@@ -8,6 +8,12 @@ export default function Hero() {
 
   return (
     <section className="hero" id="topo">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        className="hero-mobile-banner"
+        src="/bg-mobile.jpg"
+        alt="Lula com o punho erguido e o povo"
+      />
       <div className="container hero-inner">
         <div className="hero-content">
           <div className="hero-chip">
