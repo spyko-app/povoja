@@ -846,6 +846,10 @@ li {
   display: block;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
 }
+/* o ebook é retrato e ocupava a altura toda; reduz pra ficar no tamanho dos demais */
+.product-ebook .product-media img {
+  height: 78%;
+}
 .product-media-demo {
   aspect-ratio: 16 / 10;
   border-radius: var(--raio);

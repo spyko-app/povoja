@@ -20,7 +20,7 @@ export default function Products() {
 
         <div className="products-grid">
           {products.map((p) => (
-            <article className="product-card" key={p.id}>
+            <article className={`product-card product-${p.id}`} key={p.id}>
               <div className="product-media">
                 {p.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
