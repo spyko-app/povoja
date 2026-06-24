@@ -1,14 +1,13 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="brand">
-              <span className="mark">★</span>
-              <span>
-                Povo<b className="ja">Já</b>
-              </span>
+            <div className="footer-brand">
+              <Logo tone="cream" size={42} tagline />
             </div>
             <p className="footer-about">
               Movimento independente de comunicação popular. Conteúdo pronto pra

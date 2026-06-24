@@ -14,6 +14,7 @@
   --branco: #ffffff;
   --creme: #fff6f3;
   --creme-2: #fdeee9;
+  --logo-cream: #efe9dd;
   --tinta: #1c0608;
   --tinta-suave: #5a4143;
   --linha: rgba(28, 6, 8, 0.1);
@@ -213,6 +214,109 @@ ul {
 
 .btn-block {
   width: 100%;
+}
+
+/* ============================================================
+   LOGO (POVO JÁ)
+   ============================================================ */
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  font-family: var(--fonte-display);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  user-select: none;
+}
+.logo-main {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+}
+.logo-word {
+  display: inline-flex;
+  gap: 0.22em;
+  white-space: nowrap;
+}
+.logo-povo {
+  position: relative;
+}
+.logo-word.is-underline .logo-povo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -0.06em;
+  bottom: -0.01em;
+  height: 0.1em;
+  border-radius: 3px;
+  transform: skewX(-14deg);
+  background: var(--logo-underline, var(--vermelho-vivo));
+}
+.logo-ja {
+  position: relative;
+}
+.logo-burst {
+  position: absolute;
+  top: -0.36em;
+  right: -0.6em;
+  width: 1.15em;
+  height: 1.05em;
+  overflow: visible;
+}
+.logo-star {
+  fill: var(--amarelo);
+}
+.logo-tag {
+  font-family: var(--fonte-corpo);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  margin-top: 0.55em;
+  font-size: 0.2em;
+  white-space: nowrap;
+}
+
+/* tons */
+.logo--cream .logo-word {
+  color: var(--logo-cream);
+}
+.logo--cream .logo-swoosh {
+  fill: var(--logo-cream);
+}
+.logo--cream {
+  --logo-underline: #ff3b30;
+}
+.logo--cream .logo-tag {
+  color: var(--logo-cream);
+  opacity: 0.85;
+}
+
+.logo--ink .logo-word {
+  color: var(--tinta);
+}
+.logo--ink .logo-swoosh {
+  fill: var(--tinta);
+}
+.logo--ink {
+  --logo-underline: var(--vermelho-vivo);
+}
+.logo--ink .logo-tag {
+  color: var(--vermelho);
+}
+
+.logo--red .logo-word {
+  color: var(--vermelho);
+}
+.logo--red .logo-swoosh {
+  fill: var(--vermelho);
+}
+.logo--red {
+  --logo-underline: var(--tinta);
+}
+.logo--red .logo-tag {
+  color: var(--vermelho);
 }
 
 /* ============================================================
@@ -1212,12 +1316,12 @@ ul {
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
   gap: 36px;
 }
-.footer .brand {
-  color: #fff;
-  margin-bottom: 14px;
+.brand-link {
+  display: inline-flex;
+  align-items: center;
 }
-.footer .brand .ja {
-  color: var(--amarelo);
+.footer-brand {
+  margin-bottom: 18px;
 }
 .footer-about {
   font-size: 0.95rem;

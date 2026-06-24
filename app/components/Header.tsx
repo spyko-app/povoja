@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CountdownInline } from "./Countdown";
 import { useCheckout } from "./Checkout";
+import Logo from "./Logo";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
@@ -26,11 +27,8 @@ export default function Header() {
       </div>
       <header className="header">
         <div className="container header-inner">
-          <a href="#topo" className="brand" aria-label="PovoJá">
-            <span className="mark">★</span>
-            <span>
-              Povo<b className="ja">Já</b>
-            </span>
+          <a href="#topo" className="brand-link" aria-label="PovoJá">
+            <Logo tone="red" size={30} />
           </a>
 
           <nav className="nav">
