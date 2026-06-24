@@ -485,7 +485,7 @@ li {
 .hero {
   position: relative;
   color: #fff;
-  background-color: #0c0405;
+  background-color: #000000;
   background-image: linear-gradient(
       95deg,
       rgba(8, 2, 3, 0.92) 0%,
@@ -506,20 +506,6 @@ li {
 
 .hero-mobile-banner {
   display: none;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.05) 0px,
-    rgba(255, 255, 255, 0.05) 2px,
-    transparent 2px,
-    transparent 22px
-  );
-  pointer-events: none;
 }
 
 .hero .blob {
@@ -1714,16 +1700,20 @@ li {
   .section {
     padding: 60px 0;
   }
+  body {
+    background: #000000;
+  }
   .hero {
     min-height: auto;
     padding: 0 0 48px;
     display: block;
-    background: #0c0405;
+    background: #000000;
   }
   .hero-mobile-banner {
     display: block;
     width: 100%;
     height: auto;
+    margin-bottom: -1px;
   }
   .hero-inner {
     padding-top: 30px;
