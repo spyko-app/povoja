@@ -63,16 +63,16 @@ export const products: Product[] = [
 
 export type Kit = {
   name: string;
-  icon: string;
+  image: string;
   count: number;
   desc: string;
 };
 
 export const kits: Kit[] = [
-  { name: "Kit Trabalho", icon: "✊", count: 24, desc: "Direitos trabalhistas, CLT, salário mínimo e emprego com carteira." },
-  { name: "Kit Saúde", icon: "➕", count: 20, desc: "Defesa do SUS, vacina e saúde pública de qualidade pra todo mundo." },
-  { name: "Kit Educação", icon: "📚", count: 16, desc: "Escola pública, universidade, cotas e ciência pro país." },
-  { name: "Kit Direitos", icon: "⚖️", count: 18, desc: "Igualdade, diversidade, combate à fome e justiça social." },
+  { name: "Kit Trabalho", image: "/kit-trabalho.webp", count: 24, desc: "Direitos trabalhistas, CLT, salário mínimo e emprego com carteira." },
+  { name: "Kit Saúde", image: "/kit-saude.webp", count: 20, desc: "Defesa do SUS, vacina e saúde pública de qualidade pra todo mundo." },
+  { name: "Kit Educação", image: "/kit-educacao.webp", count: 16, desc: "Escola pública, universidade, cotas e ciência pro país." },
+  { name: "Kit Direitos", image: "/kit-direitos.webp", count: 18, desc: "Igualdade, diversidade, combate à fome e justiça social." },
 ];
 
 // Planos / ancoragem de preço (Kit Completo Básico x Premium)

@@ -22,7 +22,8 @@ export default function Kits() {
           {kits.map((k) => (
             <article className="kit" key={k.name}>
               <div className="kit-media">
-                <span className="kit-icon">{k.icon}</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={k.image} alt={k.name} />
               </div>
               <div className="kit-body">
                 <h3>{k.name}</h3>
