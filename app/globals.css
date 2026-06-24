@@ -1359,8 +1359,9 @@ li {
   align-items: center;
   gap: 24px;
 }
-.brand-band .logo-xl {
-  font-size: clamp(46px, 11vw, 112px);
+.brand-band-img {
+  width: clamp(260px, 56vw, 600px);
+  height: auto;
 }
 .brand-band-line {
   color: rgba(255, 255, 255, 0.72);
@@ -1389,6 +1390,10 @@ li {
 }
 .footer-brand {
   margin-bottom: 18px;
+}
+.footer-logo-img {
+  height: 62px;
+  width: auto;
 }
 .footer-about {
   font-size: 0.95rem;
@@ -1629,6 +1634,21 @@ li {
   }
   .section {
     padding: 60px 0;
+  }
+  .hero {
+    min-height: auto;
+    padding: 44px 0 52px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(40, 0, 5, 0.82) 0%,
+        rgba(40, 0, 5, 0.52) 46%,
+        rgba(40, 0, 5, 0.8) 100%
+      ),
+      url("/hero-lula.jpg");
+    background-position: center, 68% center;
+  }
+  .hero-content {
+    max-width: 100%;
   }
   .steps {
     grid-template-columns: 1fr;

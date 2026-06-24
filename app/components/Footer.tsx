@@ -1,5 +1,3 @@
-import Logo from "./Logo";
-
 export default function Footer() {
   return (
     <footer className="footer">
@@ -7,7 +5,12 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <Logo tone="cream" size={42} tagline />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-povoja.png"
+                alt="Povo Já — Trabalho, Justiça e Poder Popular"
+                className="footer-logo-img"
+              />
             </div>
             <p className="footer-about">
               Movimento independente de comunicação popular. Conteúdo pronto pra
