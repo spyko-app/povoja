@@ -4,18 +4,21 @@
 export type Product = {
   id: string;
   name: string;
+  category: string;
   badge?: string;
   desc: string;
   features: string[];
   priceOld?: string;
   price: string;
+  image?: string;
   featured?: boolean;
 };
 
 export const products: Product[] = [
   {
     id: "ebook",
-    name: "Ebook Arsenal de Argumentos",
+    name: "Arsenal de Argumentos",
+    category: "Ebook",
     badge: "Mais baixado",
     desc: "5 grandes temas destrinchados com tese, dados oficiais e o passo a passo pra rebater a direita ponto a ponto.",
     features: [
@@ -25,11 +28,12 @@ export const products: Product[] = [
       "PDF + leitura online no celular",
     ],
     priceOld: "R$47",
-    price: "R$22",
+    price: "R$23,90",
   },
   {
     id: "cards",
     name: "Pack de Cards",
+    category: "Cards",
     desc: '"Eles mentem, você responde." Cards de resposta rápida pra cada fake news da direita, prontos pra postar.',
     features: [
       "Formato Feed 1:1 e Story 9:16",
@@ -37,11 +41,12 @@ export const products: Product[] = [
       "Uma resposta pra cada mentira do dia",
       "Atualizado toda semana",
     ],
-    price: "R$16,90",
+    price: "R$13,90",
   },
   {
     id: "videos",
     name: "Pack de Vídeos",
+    category: "Vídeos",
     desc: "Vídeos verticais curtos, editados e legendados, prontos pra viralizar e furar a bolha da extrema-direita.",
     features: [
       "Vídeos 9:16 de 20 a 60 segundos",
@@ -49,11 +54,12 @@ export const products: Product[] = [
       "Prontos pra Reels, Shorts e TikTok",
       "Cortes e trilha já inclusos",
     ],
-    price: "R$16,90",
+    price: "R$15,90",
   },
   {
     id: "kit",
     name: "Kit Completo",
+    category: "Kit",
     badge: "Melhor custo",
     desc: "Toda a munição num só lugar: ebook, cards, vídeos e tweets, organizados por pauta pra você não parar nunca.",
     features: [
@@ -63,22 +69,23 @@ export const products: Product[] = [
       "Acesso ao grupo da militância",
     ],
     priceOld: "R$97",
-    price: "R$47",
+    price: "R$43,90",
     featured: true,
   },
 ];
 
 export type Kit = {
   name: string;
+  icon: string;
   count: number;
   desc: string;
 };
 
 export const kits: Kit[] = [
-  { name: "Kit Trabalho", count: 24, desc: "Direitos trabalhistas, CLT, salário mínimo e emprego com carteira." },
-  { name: "Kit Saúde", count: 20, desc: "Defesa do SUS, vacina e saúde pública de qualidade pra todo mundo." },
-  { name: "Kit Educação", count: 16, desc: "Escola pública, universidade, cotas e ciência pro país." },
-  { name: "Kit Direitos", count: 18, desc: "Igualdade, diversidade, combate à fome e justiça social." },
+  { name: "Kit Trabalho", icon: "✊", count: 24, desc: "Direitos trabalhistas, CLT, salário mínimo e emprego com carteira." },
+  { name: "Kit Saúde", icon: "➕", count: 20, desc: "Defesa do SUS, vacina e saúde pública de qualidade pra todo mundo." },
+  { name: "Kit Educação", icon: "📚", count: 16, desc: "Escola pública, universidade, cotas e ciência pro país." },
+  { name: "Kit Direitos", icon: "⚖️", count: 18, desc: "Igualdade, diversidade, combate à fome e justiça social." },
 ];
 
 export type Step = { n: string; title: string; desc: string };
@@ -142,11 +149,7 @@ export type Faq = { q: string; a: string };
 export const faqs: Faq[] = [
   {
     q: "Quanto custa e como eu pago?",
-    a: "Os materiais começam em R$16,90. O pagamento é via Pix (com liberação na hora) ou cartão. Não tem mensalidade: você paga uma vez e o conteúdo é seu pra sempre.",
-  },
-  {
-    q: "Como funciona a garantia de 7 dias?",
-    a: "Se em até 7 dias você achar que não valeu a pena, devolvemos 100% do valor. Sem pegadinha, sem letra miúda e sem burocracia.",
+    a: "Os materiais começam em R$13,90. O pagamento é via Pix (com liberação na hora) ou cartão. Não tem mensalidade: você paga uma vez e o conteúdo é seu pra sempre.",
   },
   {
     q: "Funciona em todas as redes?",

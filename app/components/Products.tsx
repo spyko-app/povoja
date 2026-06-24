@@ -18,41 +18,56 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="products">
+        <div className="product-rows">
           {products.map((p) => (
-            <div
-              className={`product ${p.featured ? "featured" : ""}`}
+            <article
+              className={`product-row ${p.featured ? "featured" : ""}`}
               key={p.id}
             >
-              {p.badge && <span className="badge">{p.badge}</span>}
-              <h3>{p.name}</h3>
-              <p className="product-desc">{p.desc}</p>
-              <ul className="product-features">
-                {p.features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-              <div className="product-foot">
-                <div className="price">
-                  <b>{p.price}</b>
-                  {p.priceOld && <s>{p.priceOld}</s>}
-                </div>
-                <button
-                  className={`btn btn-block ${
-                    p.featured ? "btn-amarelo" : "btn-vermelho"
-                  }`}
-                  onClick={() =>
-                    open({
-                      name: p.name,
-                      price: p.price,
-                      priceOld: p.priceOld,
-                    })
-                  }
-                >
-                  Comprar agora
-                </button>
+              <div className="product-media">
+                {p.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={p.image} alt={p.name} />
+                ) : (
+                  <div className="product-media-demo">
+                    <span className="demo-cat">{p.category}</span>
+                    <span className="demo-label">imagem em breve</span>
+                  </div>
+                )}
               </div>
-            </div>
+
+              <div className="product-body">
+                <div className="product-eyebrow">
+                  <span className="cat">{p.category}</span>
+                  {p.badge && <span className="product-tag">{p.badge}</span>}
+                </div>
+                <h3>{p.name}</h3>
+                <p className="product-desc">{p.desc}</p>
+                <ul className="product-features">
+                  {p.features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+                <div className="product-foot">
+                  <div className="price">
+                    <b>{p.price}</b>
+                    {p.priceOld && <s>{p.priceOld}</s>}
+                  </div>
+                  <button
+                    className={`btn ${p.featured ? "btn-amarelo" : "btn-vermelho"}`}
+                    onClick={() =>
+                      open({
+                        name: p.name,
+                        price: p.price,
+                        priceOld: p.priceOld,
+                      })
+                    }
+                  >
+                    Comprar {p.price} →
+                  </button>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>

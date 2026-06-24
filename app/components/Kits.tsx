@@ -20,19 +20,22 @@ export default function Kits() {
 
         <div className="kits">
           {kits.map((k) => (
-            <button
-              className="kit"
-              key={k.name}
-              onClick={() => open({ name: k.name, price: "R$16,90" })}
-              style={{ textAlign: "left", cursor: "pointer" }}
-            >
-              <div className="count">
-                {k.count}
-                <span>peças</span>
+            <article className="kit" key={k.name}>
+              <div className="kit-media">
+                <span className="kit-icon">{k.icon}</span>
               </div>
-              <h3>{k.name}</h3>
-              <p>{k.desc}</p>
-            </button>
+              <div className="kit-body">
+                <h3>{k.name}</h3>
+                <div className="kit-count">{k.count} peças</div>
+                <p>{k.desc}</p>
+                <button
+                  className="btn btn-amarelo btn-block"
+                  onClick={() => open({ name: k.name, price: "R$16,90" })}
+                >
+                  Comprar R$16,90
+                </button>
+              </div>
+            </article>
           ))}
         </div>
 

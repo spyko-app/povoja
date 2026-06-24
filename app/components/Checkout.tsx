@@ -88,7 +88,7 @@ export function CheckoutProvider({ children }: { children: React.ReactNode }) {
                     <li>Arquivos em alta, sem marca d&apos;água</li>
                     <li>Acesso imediato após o pagamento</li>
                     <li>Pagamento via Pix ou cartão</li>
-                    <li>Garantia de 7 dias, sem burocracia</li>
+                    <li>Sem mensalidade: pague uma vez só</li>
                     <li>Ambiente de pagamento seguro</li>
                   </ul>
                   <div className="pay-toggle">

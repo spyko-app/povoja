@@ -21,7 +21,7 @@ export default function Hero() {
 
           <p className="hero-sub">
             Ebook com argumentos que desmontam a direita, cards de resposta
-            rápida e vídeos prontos pro debate. A partir de R$16,90, com acesso
+            rápida e vídeos prontos pro debate. A partir de R$13,90, com acesso
             imediato.{" "}
             <strong>
               A extrema-direita tem milícia digital — a esquerda tem o povo
@@ -33,10 +33,14 @@ export default function Hero() {
             <button
               className="btn btn-amarelo btn-lg"
               onClick={() =>
-                open({ name: "Kit Completo", price: "R$47", priceOld: "R$97" })
+                open({
+                  name: "Kit Completo",
+                  price: "R$43,90",
+                  priceOld: "R$97",
+                })
               }
             >
-              Ver produtos · R$16,90 →
+              Ver produtos · R$13,90 →
             </button>
             <a href="#como-funciona" className="btn btn-outline-light btn-lg">
               Como funciona
@@ -49,7 +53,7 @@ export default function Hero() {
               <span>peças prontas pra postar</span>
             </div>
             <div className="hero-stat">
-              <b>R$16,90</b>
+              <b>R$13,90</b>
               <span>a partir de</span>
             </div>
             <div className="hero-stat">
@@ -57,8 +61,8 @@ export default function Hero() {
               <span>acesso na hora</span>
             </div>
             <div className="hero-stat">
-              <b>7 dias</b>
-              <span>de garantia</span>
+              <b>Sem</b>
+              <span>mensalidade</span>
             </div>
           </div>
         </div>

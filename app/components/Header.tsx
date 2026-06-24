@@ -17,13 +17,13 @@ export default function Header() {
   const { open: openCheckout } = useCheckout();
 
   const buy = () =>
-    openCheckout({ name: "Kit Completo", price: "R$47", priceOld: "R$97" });
+    openCheckout({ name: "Kit Completo", price: "R$43,90", priceOld: "R$97" });
 
   return (
     <>
       <div className="topbar">
         🔥 Campanha de lançamento: materiais a partir de{" "}
-        <strong>R$16,90</strong> · acesso imediato
+        <strong>R$13,90</strong> · acesso imediato
       </div>
       <header className="header">
         <div className="container header-inner">

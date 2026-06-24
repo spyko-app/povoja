@@ -19,7 +19,11 @@ export default function FinalCTA() {
           <button
             className="btn btn-amarelo btn-lg"
             onClick={() =>
-              open({ name: "Kit Completo", price: "R$47", priceOld: "R$97" })
+              open({
+                name: "Kit Completo",
+                price: "R$43,90",
+                priceOld: "R$97",
+              })
             }
           >
             Ver produtos →
