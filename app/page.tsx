@@ -4,6 +4,7 @@ import Hero, { Marquee } from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import Products from "./components/Products";
 import Kits from "./components/Kits";
+import Plans from "./components/Plans";
 import Strategy from "./components/Strategy";
 import Coverage from "./components/Coverage";
 import Stats from "./components/Stats";
@@ -24,6 +25,7 @@ export default function Home() {
         <HowItWorks />
         <Products />
         <Kits />
+        <Plans />
         <Strategy />
         <Coverage />
         <Stats />

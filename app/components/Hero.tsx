@@ -1,11 +1,8 @@
 "use client";
 
 import { CountdownInline } from "./Countdown";
-import { useCheckout } from "./Checkout";
 
 export default function Hero() {
-  const { open } = useCheckout();
-
   return (
     <section className="hero" id="topo">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,18 +33,9 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <button
-              className="btn btn-amarelo btn-lg"
-              onClick={() =>
-                open({
-                  name: "Kit Completo",
-                  price: "R$43,90",
-                  priceOld: "R$97",
-                })
-              }
-            >
+            <a href="#produtos" className="btn btn-amarelo btn-lg">
               Ver produtos · R$13,90 →
-            </button>
+            </a>
             <a href="#como-funciona" className="btn btn-outline-light btn-lg">
               Como funciona
             </a>

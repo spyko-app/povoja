@@ -56,22 +56,6 @@ export const products: Product[] = [
     ],
     price: "R$15,90",
   },
-  {
-    id: "kit",
-    name: "Kit Completo",
-    category: "Kit",
-    badge: "Melhor custo",
-    desc: "Toda a munição num só lugar: ebook, cards, vídeos e tweets, organizados por pauta pra você não parar nunca.",
-    features: [
-      "Ebook + cards + vídeos + tweets",
-      "Kits por tema: Trabalho, Saúde, Educação, Direitos",
-      "Atualizações futuras de graça",
-      "Acesso ao grupo da militância",
-    ],
-    priceOld: "R$97",
-    price: "R$43,90",
-    featured: true,
-  },
 ];
 
 export type Kit = {
@@ -86,6 +70,57 @@ export const kits: Kit[] = [
   { name: "Kit Saúde", icon: "➕", count: 20, desc: "Defesa do SUS, vacina e saúde pública de qualidade pra todo mundo." },
   { name: "Kit Educação", icon: "📚", count: 16, desc: "Escola pública, universidade, cotas e ciência pro país." },
   { name: "Kit Direitos", icon: "⚖️", count: 18, desc: "Igualdade, diversidade, combate à fome e justiça social." },
+];
+
+// Planos / ancoragem de preço (Kit Completo Básico x Premium)
+export type PlanFeature = { label: string; included: boolean };
+export type Plan = {
+  id: string;
+  name: string;
+  tagline: string;
+  badge?: string;
+  features: PlanFeature[];
+  priceOld: string; // soma dos itens (preço cheio)
+  price: string; // preço promocional
+  save: string; // economia
+  featured?: boolean;
+};
+
+export const plans: Plan[] = [
+  {
+    id: "basico",
+    name: "Kit Completo Básico",
+    tagline: "Os 3 materiais essenciais pra começar a disputa nas redes.",
+    features: [
+      { label: "Ebook Arsenal de Argumentos", included: true },
+      { label: "Pack de Cards", included: true },
+      { label: "Pack de Vídeos", included: true },
+      { label: "4 Kits temáticos (Trabalho, Saúde, Educação e Direitos)", included: false },
+      { label: "Atualizações semanais por 1 ano", included: false },
+      { label: "Grupo VIP da militância", included: false },
+    ],
+    priceOld: "R$53,70",
+    price: "R$43,90",
+    save: "R$9,80",
+  },
+  {
+    id: "premium",
+    name: "Kit Completo Premium",
+    tagline: "Tudo num pacote só: o arsenal completo pra não parar nunca.",
+    badge: "Mais popular",
+    features: [
+      { label: "Ebook Arsenal de Argumentos", included: true },
+      { label: "Pack de Cards", included: true },
+      { label: "Pack de Vídeos", included: true },
+      { label: "4 Kits temáticos (Trabalho, Saúde, Educação e Direitos)", included: true },
+      { label: "Atualizações semanais por 1 ano", included: true },
+      { label: "Grupo VIP da militância", included: true },
+    ],
+    priceOld: "R$121,30",
+    price: "R$79,90",
+    save: "R$41,40",
+    featured: true,
+  },
 ];
 
 export type Step = { n: string; title: string; desc: string };

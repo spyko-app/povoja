@@ -10,7 +10,7 @@ export default function Products() {
     <section className="section products-section" id="produtos">
       <div className="container">
         <div className="section-head center">
-          <span className="eyebrow">★ Produtos</span>
+          <span className="eyebrow">★ Entregáveis</span>
           <h2 className="section-title">Escolha a sua munição.</h2>
           <p className="section-sub">
             Material pronto, no formato certo, pra cada rede e cada debate. Pague
@@ -18,12 +18,9 @@ export default function Products() {
           </p>
         </div>
 
-        <div className="product-rows">
+        <div className="products-grid">
           {products.map((p) => (
-            <article
-              className={`product-row ${p.featured ? "featured" : ""}`}
-              key={p.id}
-            >
+            <article className="product-card" key={p.id}>
               <div className="product-media">
                 {p.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -35,8 +32,7 @@ export default function Products() {
                   </div>
                 )}
               </div>
-
-              <div className="product-body">
+              <div className="product-card-body">
                 <div className="product-eyebrow">
                   <span className="cat">{p.category}</span>
                   {p.badge && <span className="product-tag">{p.badge}</span>}
@@ -54,7 +50,7 @@ export default function Products() {
                     {p.priceOld && <s>{p.priceOld}</s>}
                   </div>
                   <button
-                    className={`btn ${p.featured ? "btn-amarelo" : "btn-vermelho"}`}
+                    className="btn btn-vermelho btn-block"
                     onClick={() =>
                       open({
                         name: p.name,
@@ -63,7 +59,7 @@ export default function Products() {
                       })
                     }
                   >
-                    Comprar {p.price} →
+                    Comprar {p.price}
                   </button>
                 </div>
               </div>

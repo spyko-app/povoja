@@ -1,10 +1,8 @@
 "use client";
 
 import { CountdownBig } from "./Countdown";
-import { useCheckout } from "./Checkout";
 
 export default function FinalCTA() {
-  const { open } = useCheckout();
   return (
     <section className="section final-cta">
       <div className="container">
@@ -16,18 +14,9 @@ export default function FinalCTA() {
         </p>
         <CountdownBig />
         <div>
-          <button
-            className="btn btn-amarelo btn-lg"
-            onClick={() =>
-              open({
-                name: "Kit Completo",
-                price: "R$43,90",
-                priceOld: "R$97",
-              })
-            }
-          >
+          <a href="#produtos" className="btn btn-amarelo btn-lg">
             Ver produtos →
-          </button>
+          </a>
         </div>
       </div>
     </section>

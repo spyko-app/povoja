@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { CountdownInline } from "./Countdown";
-import { useCheckout } from "./Checkout";
 import Logo from "./Logo";
 
 const links = [
@@ -14,10 +13,6 @@ const links = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const { open: openCheckout } = useCheckout();
-
-  const buy = () =>
-    openCheckout({ name: "Kit Completo", price: "R$43,90", priceOld: "R$97" });
 
   return (
     <>
@@ -44,9 +39,9 @@ export default function Header() {
               <CountdownInline />
               <span>pro 1º turno</span>
             </div>
-            <button className="btn btn-vermelho" onClick={buy}>
+            <a href="#produtos" className="btn btn-vermelho">
               Ver produtos
-            </button>
+            </a>
             <button
               className={`burger ${open ? "open" : ""}`}
               aria-label="Menu"
@@ -65,15 +60,13 @@ export default function Header() {
               {l.label}
             </a>
           ))}
-          <button
+          <a
+            href="#produtos"
             className="btn btn-vermelho"
-            onClick={() => {
-              setOpen(false);
-              buy();
-            }}
+            onClick={() => setOpen(false)}
           >
             Ver produtos
-          </button>
+          </a>
         </div>
       </header>
     </>
