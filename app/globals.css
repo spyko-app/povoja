@@ -831,12 +831,20 @@ li {
 
 /* mídia no topo: imagem real ou placeholder de demonstração */
 .product-media {
-  padding: 18px 18px 0;
+  aspect-ratio: 4 / 3;
+  background: radial-gradient(circle at 50% 32%, #3a0a10 0%, #140406 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 .product-media img {
   width: 100%;
-  border-radius: var(--raio);
+  height: 100%;
+  object-fit: contain;
   display: block;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
 }
 .product-media-demo {
   aspect-ratio: 16 / 10;

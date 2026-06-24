@@ -29,6 +29,7 @@ export const products: Product[] = [
     ],
     priceOld: "R$47",
     price: "R$23,90",
+    image: "/product-ebook.webp",
   },
   {
     id: "cards",
@@ -42,6 +43,7 @@ export const products: Product[] = [
       "Atualizado toda semana",
     ],
     price: "R$13,90",
+    image: "/product-cards.webp",
   },
   {
     id: "videos",
@@ -55,6 +57,7 @@ export const products: Product[] = [
       "Cortes e trilha já inclusos",
     ],
     price: "R$15,90",
+    image: "/product-videos.webp",
   },
 ];
 
