@@ -2,19 +2,21 @@ type Tone = "cream" | "ink" | "red";
 
 export default function Logo({
   tone = "ink",
-  size = 30,
+  size,
   tagline = false,
   underline = true,
+  className = "",
 }: {
   tone?: Tone;
   size?: number;
   tagline?: boolean;
   underline?: boolean;
+  className?: string;
 }) {
   return (
     <span
-      className={`logo logo--${tone}`}
-      style={{ fontSize: size }}
+      className={`logo logo--${tone} ${className}`.trim()}
+      style={size ? { fontSize: size } : undefined}
       role="img"
       aria-label="Povo Já"
     >

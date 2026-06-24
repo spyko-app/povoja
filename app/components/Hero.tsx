@@ -8,10 +8,8 @@ export default function Hero() {
 
   return (
     <section className="hero" id="topo">
-      <span className="blob a" />
-      <span className="blob b" />
-      <div className="container hero-grid">
-        <div>
+      <div className="container hero-inner">
+        <div className="hero-content">
           <div className="hero-chip">
             <span className="pulse" />
             1º turno 2026 · faltam <CountdownInline />
@@ -63,36 +61,6 @@ export default function Hero() {
               <span>de garantia</span>
             </div>
           </div>
-        </div>
-
-        <div className="hero-card">
-          <span className="tag">Mais baixado</span>
-          <h3>Arsenal de Argumentos</h3>
-          <p className="muted">
-            O ebook que vira o jogo no debate. Tese, dados oficiais e a resposta
-            pronta pra cada lorota.
-          </p>
-          <ul>
-            <li>5 temas com dados e fontes</li>
-            <li>Como responder ao bolsonarismo</li>
-            <li>Mitos da direita desmontados</li>
-          </ul>
-          <div className="price">
-            <b>R$22</b>
-            <s>R$47</s>
-          </div>
-          <button
-            className="btn btn-vermelho btn-block"
-            onClick={() =>
-              open({
-                name: "Ebook Arsenal de Argumentos",
-                price: "R$22",
-                priceOld: "R$47",
-              })
-            }
-          >
-            Quero meu arsenal →
-          </button>
         </div>
       </div>
     </section>

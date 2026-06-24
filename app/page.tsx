@@ -9,6 +9,7 @@ import Coverage from "./components/Coverage";
 import Stats from "./components/Stats";
 import Community from "./components/Community";
 import Mission from "./components/Mission";
+import Brand from "./components/Brand";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
@@ -28,6 +29,7 @@ export default function Home() {
         <Stats />
         <Community />
         <Mission />
+        <Brand />
         <FAQ />
         <FinalCTA />
       </main>
