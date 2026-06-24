@@ -831,24 +831,23 @@ li {
 
 /* mídia no topo: imagem real ou placeholder de demonstração */
 .product-media {
-  aspect-ratio: 4 / 3;
+  height: 230px;
   background: radial-gradient(circle at 50% 32%, #3a0a10 0%, #140406 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  padding: 16px;
+  overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, 0.18);
 }
 .product-media img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
-}
-/* o ebook é retrato e ocupava a altura toda; reduz pra ficar no tamanho dos demais */
-.product-ebook .product-media img {
-  height: 78%;
 }
 .product-media-demo {
   aspect-ratio: 16 / 10;
