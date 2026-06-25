@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arsenal de Argumentos — Guia de debate da esquerda brasileira | PovoJá</title>
+<meta name="description" content="Guia de debate da esquerda brasileira: tese, dados oficiais e o passo a passo pra rebater a direita ponto a ponto. Iniciativa independente de comunicação popular.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ARSENAL DE ARGUMENTOS — PovoJá
+   Ebook A4, único arquivo, pronto pra impressão/PDF.
+   Paleta: vermelho, vermelho escuro, preto, creme, amarelo.
+   ============================================================ */
+
+:root{
+  --vermelho:#C20019;
+  --vermelho-vivo:#E60A1F;
+  --vermelho-escuro:#5E000B;
+  --preto:#0C0405;
+  --creme:#EFE9DD;
+  --creme-claro:#F6F2E9;
+  --amarelo:#FFC400;
+  --verde:#1E7A34;
+  --tinta-suave:#6a5f54;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ background:#4b4b4b; }
+body{
+  font-family:'Inter', system-ui, -apple-system, sans-serif;
+  color:var(--preto);
+  background:#4b4b4b;
+  -webkit-font-smoothing:antialiased;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+}
+
+@page{ size:A4; margin:0; }
+
+.page{
+  width:210mm;
+  min-height:297mm;
+  background:var(--creme);
+  position:relative;
+  overflow:hidden;
+  margin:8mm auto;
+  page-break-after:always;
+  box-shadow:0 6px 36px rgba(0,0,0,.45);
+}
+.page:last-child{ page-break-after:auto; }
+
+@media print{
+  html, body{ background:#fff; }
+  .page{ margin:0; box-shadow:none; }
+}
+
+/* ---------- elementos de texto ---------- */
+.content{ padding:22mm 20mm 26mm 20mm; }
+.kicker{
+  font-weight:800; text-transform:uppercase; letter-spacing:2.5px;
+  font-size:9pt; color:var(--vermelho-vivo);
+}
+h1,h2,h3,h4{ font-family:'Anton', sans-serif; font-weight:400; text-transform:uppercase; }
+h2.title{
+  color:var(--vermelho);
+  font-size:31pt; line-height:.96; letter-spacing:.5px;
+  margin:.18em 0 .5em;
+}
+h3.sub{
+  color:var(--preto);
+  font-size:16pt; letter-spacing:.5px;
+  margin:.2em 0 .55em;
+  display:flex; align-items:center; gap:9px;
+}
+h3.sub .tick{ color:var(--vermelho); }
+p{ font-size:11.3pt; line-height:1.52; margin:0 0 .72em; }
+.lead{ font-size:12.6pt; line-height:1.5; font-weight:500; }
+.hl{ background:var(--amarelo); color:var(--preto); padding:0 .18em; font-weight:700; border-radius:1px; }
+strong{ font-weight:700; }
+.conferir{ font-style:italic; color:var(--vermelho); font-weight:600; font-size:.82em; }
+
+/* régua superior nas páginas de conteúdo */
+.toprule{
+  display:flex; align-items:center; justify-content:space-between;
+  border-bottom:3px solid var(--preto);
+  padding-bottom:5px; margin-bottom:14px;
+}
+.toprule .cap{ font-weight:800; text-transform:uppercase; letter-spacing:2px; font-size:8.5pt; color:var(--preto); }
+.toprule .star{ color:var(--vermelho); font-size:11pt; }
+
+/* ---------- rodapé ---------- */
+.footer{
+  position:absolute; left:0; right:0; bottom:11mm;
+  padding:0 20mm;
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:8.6pt; font-weight:700; letter-spacing:.6px;
+}
+.footer .fb{ color:var(--vermelho); text-transform:uppercase; }
+.footer .fb .star{ color:var(--amarelo); }
+.footer .pg{ color:var(--preto); font-family:'Anton', sans-serif; font-size:11pt; letter-spacing:1px; }
+.footer--dark .fb{ color:var(--creme); }
+.footer--dark .pg{ color:var(--amarelo); }
+
+/* ---------- box OS NÚMEROS ---------- */
+.numeros{
+  border:3px solid var(--vermelho);
+  background:#fff;
+  padding:14px 18px 12px;
+  margin:6px 0 4px;
+}
+.numeros .nh{
+  font-family:'Anton', sans-serif; text-transform:uppercase;
+  color:var(--vermelho); font-size:15.5pt; letter-spacing:1px;
+  display:flex; align-items:center; gap:9px; margin-bottom:9px;
+}
+.numeros .nh .star{ color:var(--amarelo); -webkit-text-stroke:.6px var(--vermelho); }
+.numeros ul{ list-style:none; }
+.numeros li{
+  display:flex; gap:11px; align-items:baseline;
+  padding:7px 0; border-bottom:1px dashed rgba(194,0,25,.32);
+  font-size:10.5pt; line-height:1.36;
+}
+.numeros li:last-child{ border-bottom:none; }
+.numeros li .big{
+  font-family:'Anton', sans-serif; color:var(--vermelho-vivo);
+  font-size:15pt; line-height:1; white-space:nowrap; flex:0 0 auto; min-width:0;
+}
+.numeros .fonte{
+  font-style:italic; font-size:8.4pt; color:var(--tinta-suave);
+  margin-top:9px; border-top:1px solid rgba(12,4,5,.12); padding-top:7px;
+}
+
+/* ---------- MITO / VERDADE ---------- */
+.confronto{ margin:0 0 13px; border:1px solid rgba(12,4,5,.18); }
+.tag{
+  font-family:'Anton', sans-serif; text-transform:uppercase; letter-spacing:1px;
+  font-size:11.5pt; padding:6px 13px; display:flex; align-items:center; gap:9px;
+}
+.tag .mk{ font-size:13pt; line-height:1; }
+.tag-mito{ background:var(--vermelho); color:#fff; }
+.tag-verdade{ background:var(--amarelo); color:var(--preto); }
+.body-mito, .body-verdade{ padding:9px 14px; font-size:10.4pt; line-height:1.42; }
+.body-mito{ background:#fbeceb; color:#5a2a2d; font-style:italic; }
+.body-verdade{ background:#fff; }
+.body-verdade strong{ color:var(--vermelho); }
+
+/* ---------- FRASES PRONTAS ---------- */
+.frasebox-title{
+  font-family:'Anton', sans-serif; text-transform:uppercase; color:var(--vermelho);
+  font-size:16pt; letter-spacing:.5px; margin:4px 0 11px;
+  display:flex; align-items:center; gap:9px;
+}
+.frasebox-title .star{ color:var(--amarelo); -webkit-text-stroke:.6px var(--vermelho); }
+.frases{ display:flex; flex-direction:column; gap:9px; }
+.frase{
+  background:var(--preto); color:var(--creme);
+  padding:11px 15px 11px 14px;
+  border-left:7px solid var(--amarelo);
+  font-weight:600; font-size:11pt; line-height:1.34;
+  display:flex; gap:10px; align-items:flex-start;
+}
+.frase .star{ color:var(--amarelo); flex:0 0 auto; font-size:11pt; line-height:1.5; }
+
+/* destaque "puxa-olho" */
+.callout{
+  background:var(--vermelho-escuro); color:var(--creme);
+  padding:13px 16px; margin:4px 0 14px;
+  border-left:7px solid var(--amarelo);
+  font-size:11.4pt; line-height:1.45; font-weight:500;
+}
+.callout strong{ color:var(--amarelo); }
+
+/* ============================================================
+   PÁGINAS ESCURAS (capa, aberturas, final)
+   ============================================================ */
+.dark{
+  background:
+    radial-gradient(120% 75% at 78% 8%, rgba(230,10,31,.50), transparent 58%),
+    radial-gradient(95% 60% at 2% 102%, rgba(94,0,11,.92), transparent 60%),
+    linear-gradient(158deg, #1b0205 0%, #0C0405 55%, #3a0008 100%);
+  color:var(--creme);
+}
+.dark .footer .fb{ color:var(--creme); }
+
+/* estrela-marca d'água */
+.starwm{
+  position:absolute; font-family:'Anton', sans-serif;
+  color:var(--amarelo); opacity:.07; pointer-events:none; user-select:none;
+  line-height:.7;
+}
+
+/* ----- CAPA ----- */
+.cover{ display:flex; flex-direction:column; justify-content:space-between; padding:24mm 22mm 22mm; }
+.cover-top{ display:flex; align-items:center; justify-content:space-between; z-index:2; }
+.brandmark{ display:flex; align-items:center; gap:9px; }
+.brandmark .bm-star{ color:var(--amarelo); font-size:17pt; }
+.brandmark .bm-name{ font-family:'Anton', sans-serif; font-size:15pt; letter-spacing:2px; color:#fff; }
+.brandmark .bm-tag{ font-size:8pt; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--amarelo); }
+.cover-edition{ font-size:8.2pt; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--creme); opacity:.8; text-align:right; }
+.cover-mid{ z-index:2; }
+.cover-eyebrow{
+  display:inline-block; background:var(--amarelo); color:var(--preto);
+  font-weight:800; text-transform:uppercase; letter-spacing:2.5px; font-size:9.5pt;
+  padding:5px 12px; margin-bottom:16px;
+}
+.cover h1{
+  font-size:74pt; line-height:.9; color:#fff; letter-spacing:.5px;
+  text-shadow:0 4px 0 rgba(94,0,11,.55);
+}
+.cover h1 .yellow{ color:var(--amarelo); }
+.cover-sub{
+  font-size:14.5pt; font-weight:500; line-height:1.34; color:var(--creme);
+  margin-top:18px; max-width:150mm;
+}
+.cover-sub b{ color:var(--amarelo); font-weight:700; }
+.cover-rule{ height:5px; width:64mm; background:var(--amarelo); margin:22px 0 0; }
+.cover-bottom{ display:flex; align-items:flex-end; justify-content:space-between; z-index:2; }
+.cover-bigbrand{ font-family:'Anton', sans-serif; font-size:30pt; letter-spacing:1px; color:#fff; line-height:.9; }
+.cover-bigbrand .ja{ color:var(--amarelo); }
+.cover-slogan{ font-size:9pt; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--amarelo); margin-top:4px; }
+.cover-star-deco{ font-family:'Anton',sans-serif; font-size:60pt; color:var(--amarelo); }
+
+/* ----- ABERTURA DE CAPÍTULO ----- */
+.chapter-open{ display:flex; flex-direction:column; justify-content:center; padding:26mm 22mm; }
+.co-label{ font-weight:800; text-transform:uppercase; letter-spacing:4px; font-size:10pt; color:var(--amarelo); z-index:2; }
+.co-num{ font-family:'Anton', sans-serif; font-size:165pt; color:var(--amarelo); line-height:.78; margin:6px 0 0; z-index:2; text-shadow:0 5px 0 rgba(94,0,11,.5); }
+.co-bar{ height:5px; width:52mm; background:var(--vermelho-vivo); margin:8px 0 18px; z-index:2; }
+.chapter-open h2{ font-size:46pt; line-height:.95; color:#fff; letter-spacing:.5px; z-index:2; max-width:160mm; }
+.co-tese{ font-size:12.4pt; line-height:1.5; color:var(--creme); margin-top:20px; max-width:152mm; z-index:2; font-weight:500; }
+.co-tese b{ color:var(--amarelo); font-weight:700; }
+.co-list{ margin-top:22px; z-index:2; display:flex; flex-direction:column; gap:7px; }
+.co-list .ci{ display:flex; align-items:center; gap:11px; font-size:10.6pt; font-weight:600; letter-spacing:.4px; color:var(--creme); }
+.co-list .ci .star{ color:var(--amarelo); }
+.co-list .ci .ln{ flex:1; height:1px; background:rgba(239,233,221,.25); }
+
+/* ----- PÁGINA DE ROSTO ----- */
+.rosto{ padding:30mm 24mm; display:flex; flex-direction:column; height:297mm; }
+.rosto .r-brand{ font-family:'Anton',sans-serif; font-size:13pt; letter-spacing:2px; color:var(--vermelho); display:flex; align-items:center; gap:8px; }
+.rosto .r-brand .star{ color:var(--amarelo); -webkit-text-stroke:.6px var(--vermelho); }
+.rosto .r-mid{ margin-top:auto; margin-bottom:auto; }
+.rosto h1{ font-family:'Anton',sans-serif; font-size:46pt; line-height:.94; color:var(--vermelho); }
+.rosto .r-sub{ font-size:13pt; font-weight:500; color:var(--preto); margin-top:14px; max-width:140mm; line-height:1.4; }
+.rosto .r-line{ height:4px; width:48mm; background:var(--amarelo); margin:18px 0; }
+.aviso{
+  border:2px solid var(--vermelho); background:#fff;
+  padding:14px 16px; margin-top:8px; max-width:150mm;
+}
+.aviso .at{ font-weight:800; text-transform:uppercase; letter-spacing:1.5px; font-size:8.6pt; color:var(--vermelho); margin-bottom:6px; }
+.aviso p{ font-size:9.8pt; line-height:1.45; margin:0; color:var(--preto); }
+.rosto .r-foot{ margin-top:auto; font-size:9pt; color:var(--tinta-suave); line-height:1.5; }
+.rosto .r-foot b{ color:var(--preto); }
+
+/* ----- SUMÁRIO ----- */
+.sumario{ padding:24mm 22mm 26mm; }
+.toc{ margin-top:6px; }
+.toc-item{ display:flex; align-items:baseline; gap:10px; padding:11px 0; border-bottom:1.5px solid rgba(12,4,5,.16); }
+.toc-num{ font-family:'Anton',sans-serif; font-size:19pt; color:var(--vermelho); min-width:34px; }
+.toc-txt{ flex:1; }
+.toc-txt .t1{ font-weight:800; text-transform:uppercase; letter-spacing:.6px; font-size:11.5pt; color:var(--preto); }
+.toc-txt .t2{ font-size:9.4pt; color:var(--tinta-suave); margin-top:1px; }
+.toc-dots{ flex:1; border-bottom:2px dotted rgba(12,4,5,.3); transform:translateY(-3px); min-width:18px; }
+.toc-pg{ font-family:'Anton',sans-serif; font-size:14pt; color:var(--preto); }
+.toc-item.special .toc-num{ color:var(--vermelho-vivo); }
+.toc-item.special .t1{ color:var(--vermelho); }
+
+/* ----- INTRO ----- */
+.intro-hero{ background:var(--vermelho); color:var(--creme); padding:16px 18px; margin:2px 0 16px; }
+.intro-hero .big{ font-family:'Anton',sans-serif; font-size:20pt; line-height:1.02; letter-spacing:.5px; }
+.intro-hero .big b{ color:var(--amarelo); }
+.steps{ display:flex; flex-direction:column; gap:10px; margin-top:4px; }
+.step{ display:flex; gap:13px; align-items:flex-start; }
+.step .sn{ font-family:'Anton',sans-serif; font-size:20pt; color:var(--vermelho); line-height:1; min-width:30px; }
+.step .sx{ font-size:10.6pt; line-height:1.42; }
+.step .sx b{ color:var(--preto); }
+
+/* ----- FINAL ----- */
+.final{ display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:26mm 22mm; }
+.final .f-star{ font-family:'Anton',sans-serif; font-size:46pt; color:var(--amarelo); z-index:2; }
+.final h1{ font-family:'Anton',sans-serif; font-size:52pt; line-height:.94; color:#fff; margin:10px 0 0; z-index:2; max-width:165mm; }
+.final h1 .yellow{ color:var(--amarelo); }
+.final .f-sub{ font-size:13pt; line-height:1.5; color:var(--creme); margin-top:20px; max-width:150mm; z-index:2; font-weight:500; }
+.final .f-cta{ background:var(--amarelo); color:var(--preto); font-weight:800; text-transform:uppercase; letter-spacing:1.5px; font-size:11pt; padding:12px 22px; margin-top:26px; z-index:2; }
+.final .f-share{ margin-top:16px; font-size:10pt; color:var(--creme); z-index:2; max-width:140mm; line-height:1.5; }
+.final .f-brand{ margin-top:34px; z-index:2; }
+.final .f-brand .bn{ font-family:'Anton',sans-serif; font-size:26pt; color:#fff; letter-spacing:1px; }
+.final .f-brand .bn .ja{ color:var(--amarelo); }
+.final .f-brand .sl{ font-size:8.6pt; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--amarelo); margin-top:5px; }
+</style>
+</head>
+<body>
+
+<!-- ===================== 1. CAPA ===================== -->
+<section class="page dark cover">
+  <div class="starwm" style="font-size:340pt; right:-40mm; bottom:-30mm;">★</div>
+  <div class="cover-top">
+    <div class="brandmark">
+      <span class="bm-star">★</span>
+      <div>
+        <div class="bm-name">POVO JÁ</div>
+        <div class="bm-tag">Trabalho · Justiça · Poder Popular</div>
+      </div>
+    </div>
+    <div class="cover-edition">Comunicação popular<br>Edição 2026</div>
+  </div>
+
+  <div class="cover-mid">
+    <span class="cover-eyebrow">★ Guia de combate político</span>
+    <h1>ARSENAL<br>DE <span class="yellow">ARGUMENTOS</span></h1>
+    <div class="cover-rule"></div>
+    <p class="cover-sub">Guia de debate da esquerda brasileira — <b>para enfrentar a direita e defender o Brasil</b>. Tese, dados oficiais e o passo a passo pra rebater ponto a ponto.</p>
+  </div>
+
+  <div class="cover-bottom">
+    <div>
+      <div class="cover-bigbrand">POVO<span class="ja"> JÁ</span></div>
+      <div class="cover-slogan">Não basta ter razão — tem que ter alcance</div>
+    </div>
+    <div class="cover-star-deco">★</div>
+  </div>
+</section>
+
+<!-- ===================== 2. PÁGINA DE ROSTO ===================== -->
+<section class="page rosto">
+  <div class="r-brand"><span class="star">★</span> POVO JÁ</div>
+  <div class="r-mid">
+    <h1>ARSENAL<br>DE ARGUMENTOS</h1>
+    <div class="r-line"></div>
+    <p class="r-sub">Guia de debate da esquerda brasileira. Para enfrentar a direita e defender o Brasil — com tese, número e fonte na mão.</p>
+    <div class="aviso">
+      <div class="at">★ Aviso</div>
+      <p>Iniciativa independente de comunicação popular. Conteúdo informativo e de mobilização. Sem vínculo oficial com partidos ou candidaturas. As marcas e referências citadas pertencem aos seus respectivos donos.</p>
+    </div>
+  </div>
+  <div class="r-foot">
+    <b>PovoJá · Arsenal de conteúdo popular.</b><br>
+    Dados de fontes públicas (IBGE, DIEESE, IPEA, FAO, TSE, ministérios e legislação brasileira), citados ao lado de cada informação.<br>
+    Distribuição gratuita e incentivada. Compartilhe com a sua rede.
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">2</span>
+  </div>
+</section>
+
+<!-- ===================== 3. SUMÁRIO ===================== -->
+<section class="page sumario">
+  <div class="toprule"><span class="cap">★ Arsenal de Argumentos</span><span class="star">★</span></div>
+  <span class="kicker">O que você vai encontrar</span>
+  <h2 class="title">Sumário</h2>
+  <div class="toc">
+    <div class="toc-item">
+      <span class="toc-num">—</span>
+      <span class="toc-txt"><span class="t1">Introdução · Por que disputar as redes</span><span class="t2">Não basta ter razão, tem que ter alcance — e como usar este guia.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">04</span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">01</span>
+      <span class="toc-txt"><span class="t1">Trabalho e Emprego</span><span class="t2">CLT, carteira assinada, salário mínimo e valorização do trabalho.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">06</span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">02</span>
+      <span class="toc-txt"><span class="t1">Saúde e SUS</span><span class="t2">Saúde pública e gratuita, vacina e a defesa do SUS.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">10</span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">03</span>
+      <span class="toc-txt"><span class="t1">Educação</span><span class="t2">Escola pública, universidade, cotas e ciência.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">14</span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">04</span>
+      <span class="toc-txt"><span class="t1">Economia e Custo de Vida</span><span class="t2">Inflação, fome, preço dos alimentos e aluguel.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">18</span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">05</span>
+      <span class="toc-txt"><span class="t1">Democracia e Direitos</span><span class="t2">Golpismo e anistia, justiça social, igualdade e diversidade.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">22</span>
+    </div>
+    <div class="toc-item special">
+      <span class="toc-num">★</span>
+      <span class="toc-txt"><span class="t1">Dossiê · Como responder ao bolsonarismo</span><span class="t2">12 bordões e fake news com a resposta curta e direta.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">26</span>
+    </div>
+    <div class="toc-item special">
+      <span class="toc-num">★</span>
+      <span class="toc-txt"><span class="t1">O povo unido jamais será vencido</span><span class="t2">Entre no grupo e espalhe a munição.</span></span>
+      <span class="toc-dots"></span><span class="toc-pg">29</span>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">3</span>
+  </div>
+</section>
+
+<!-- ===================== 4. INTRODUÇÃO (p.1) ===================== -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Introdução</span><span class="star">★</span></div>
+  <span class="kicker">Por que a gente tem que estar nas redes</span>
+  <h2 class="title">Não basta ter razão.<br>Tem que ter alcance.</h2>
+
+  <p class="lead">A direita entendeu antes da esquerda que a política também se disputa no celular. Enquanto a gente discutia em reunião, eles montaram uma máquina de mentira que entra no grupo da família, no zap do trabalho e no feed da vizinha. E mentira que não encontra resposta vira "verdade" na cabeça de quem está cansado e com medo.</p>
+
+  <div class="intro-hero">
+    <div class="big">A verdade não corre sozinha.<br><b>Quem carrega a verdade é você.</b></div>
+  </div>
+
+  <p>A mentira é rápida porque é simples e mexe com o medo. A nossa resposta tem que ser do mesmo tamanho: <strong>curta, direta e com dado na mão</strong>. Argumento bom não é o mais bonito — é o que a tia entende no grupo do WhatsApp e o que o colega repete no boteco.</p>
+
+  <p>Este guia é a sua munição. Cada tema vem com uma <strong>tese</strong> pra você ter clareza do que defende, os <strong>números</strong> com fonte e ano pra ninguém te chamar de mentiroso, o <strong>desmonte dos mitos</strong> que a direita repete e <strong>frases prontas</strong> pra copiar, colar e disparar. Não é pra decorar tudo — é pra ter sempre à mão na hora da briga.</p>
+
+  <div class="callout">A direita gasta fortuna pra te convencer de que o seu inimigo é o vizinho pobre, o nordestino, o sem-terra, o estudante de cota. <strong>É mentira.</strong> O seu adversário é quem lucra com você desinformado, sem direito e com medo.</div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">4</span>
+  </div>
+</section>
+
+<!-- ===================== 4. INTRODUÇÃO (p.2) ===================== -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Introdução</span><span class="star">★</span></div>
+  <span class="kicker">Manual de uso</span>
+  <h2 class="title">Como usar este guia<br>no dia a dia</h2>
+
+  <p>São <strong>5 capítulos</strong> — Trabalho, Saúde, Educação, Economia e Democracia — mais um <strong>Dossiê</strong> pra responder os bordões mais comuns do bolsonarismo. Cada capítulo segue sempre a mesma receita, fácil de achar na pressa:</p>
+
+  <div class="steps">
+    <div class="step"><span class="sn">01</span><span class="sx"><b>Comece pela tese.</b> Um parágrafo pra você saber, em dez segundos, o que a esquerda defende naquele tema. É a sua bússola.</span></div>
+    <div class="step"><span class="sn">02</span><span class="sx"><b>Carregue os números.</b> No box "Os Números" tem dado oficial com fonte e ano. Cite sempre a fonte — é ela que cala o "tá inventando".</span></div>
+    <div class="step"><span class="sn">03</span><span class="sx"><b>Desmonte o mito.</b> "O que a direita diz" traz a mentira no box vermelho (MITO ✕) e a resposta no box amarelo (VERDADE ✓).</span></div>
+    <div class="step"><span class="sn">04</span><span class="sx"><b>Dispare a frase pronta.</b> No fim de cada capítulo tem 5 frases curtas pra copiar e colar no comentário, no story ou no grupo.</span></div>
+  </div>
+
+  <h3 class="sub"><span class="tick">★</span> Quatro regras de ouro do debate</h3>
+  <div class="numeros" style="border-color:var(--preto);">
+    <ul>
+      <li><span class="big" style="color:var(--vermelho);">1</span> <span><b>Fale com quem assiste, não com o fanático.</b> Você não vai converter o militante raivoso. Você ganha quem lê a discussão calado.</span></li>
+      <li><span class="big" style="color:var(--vermelho);">2</span> <span><b>Ataque a ideia, não a pessoa.</b> Xingar te faz perder a razão. Dado e calma constrangem a mentira.</span></li>
+      <li><span class="big" style="color:var(--vermelho);">3</span> <span><b>Seja curto.</b> Texto gigante ninguém lê. Uma frase forte com um número viaja mais longe.</span></li>
+      <li><span class="big" style="color:var(--vermelho);">4</span> <span><b>Repita, repita, repita.</b> A direita venceu na base da repetição. Faça o mesmo com a verdade.</span></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">5</span>
+  </div>
+</section>
+
+<!-- ===================== CAP 1 · ABERTURA ===================== -->
+<section class="page dark chapter-open">
+  <div class="starwm" style="font-size:300pt; right:-30mm; top:-20mm;">★</div>
+  <div class="co-label">★ Capítulo Um</div>
+  <div class="co-num">01</div>
+  <div class="co-bar"></div>
+  <h2>TRABALHO<br>E EMPREGO</h2>
+  <p class="co-tese">Quem constrói este país é quem acorda cedo e tem calo na mão. <b>Direito trabalhista não é custo: é dignidade.</b> CLT, carteira assinada e salário mínimo que sobe acima da inflação são o que separa o trabalhador da exploração sem freio.</p>
+  <div class="co-list">
+    <div class="ci"><span class="star">★</span> A tese: trabalho valorizado é país de pé <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Os números da carteira assinada <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> 5 mitos da direita, desmontados <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Frases prontas pro debate <span class="ln"></span></div>
+  </div>
+  <div class="footer footer--dark">
+    <span class="fb"><span class="star" style="color:var(--amarelo)">★</span> PovoJá</span>
+    <span class="pg">6</span>
+  </div>
+</section>
+
+<!-- CAP 1 · conteúdo A: tese + números -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 01 · Trabalho e Emprego</span><span class="star">★</span></div>
+  <span class="kicker">A tese</span>
+  <h2 class="title">O trabalho é a base<br>de tudo</h2>
+  <p class="lead">Nenhuma riqueza nasce sozinha: ela sai do suor de quem trabalha. Por isso a esquerda defende o trabalho com direito — carteira assinada, jornada com limite, férias, 13º, FGTS e aposentadoria. A direita chama isso de "custo" porque enxerga o trabalhador como despesa. Pra gente, é o contrário: <span class="hl">trabalhador com direito é gente com dignidade e com dinheiro pra gastar</span>, o que faz o comércio girar e o país crescer de baixo pra cima.</p>
+  <p>Quando o salário mínimo sobe acima da inflação, não é só o salário de um: é o piso de aposentadoria, do benefício, do seguro-desemprego. Sobe a base, sobe todo mundo. Defender a CLT é defender que o risco do negócio fique com quem lucra — e não nas costas de quem só tem a força do próprio braço pra vender.</p>
+
+  <div class="numeros">
+    <div class="nh"><span class="star">★</span> Os Números</div>
+    <ul>
+      <li><span class="big">1943</span><span>Ano em que a <b>CLT</b> (Consolidação das Leis do Trabalho) foi criada, garantindo direitos a quem trabalha. <i>Fonte: Decreto-Lei nº 5.452, de 1º de maio de 1943.</i></span></li>
+      <li><span class="big">R$ 1.518</span><span>Salário mínimo nacional em <b>2025</b>, reajustado acima da inflação (era R$ 1.412 em 2024). <i>Fonte: Governo Federal / Ministério do Trabalho e Emprego, 2025.</i></span></li>
+      <li><span class="big">~6%</span><span>Taxa de desemprego no fim de <b>2024</b>: a <b>menor da série histórica</b> iniciada em 2012. <i>Fonte: IBGE / PNAD Contínua, 2024. <span class="conferir">[conferir percentual atualizado]</span></i></span></li>
+      <li><span class="big">+1,5 mi</span><span>Empregos formais (saldo de vagas com carteira) criados em <b>2024</b>. <i>Fonte: Novo CAGED / MTE, 2024. <span class="conferir">[conferir fonte]</span></i></span></li>
+      <li><span class="big">~39%</span><span>Parcela dos trabalhadores ocupados na <b>informalidade</b> — sem carteira e sem rede de proteção. <i>Fonte: IBGE / PNAD Contínua, 2024.</i></span></li>
+    </ul>
+    <div class="fonte">Dados oficiais. Sempre cite a fonte ao postar: é ela que transforma sua opinião em fato.</div>
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">7</span>
+  </div>
+</section>
+
+<!-- CAP 1 · conteúdo B: mitos 1-3 -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 01 · Trabalho e Emprego</span><span class="star">★</span></div>
+  <span class="kicker">O que a direita diz</span>
+  <h2 class="title">Os mitos,<br>desmontados</h2>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Direito trabalhista é custo que trava o emprego. Pra gerar vaga, é só flexibilizar a CLT."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">A reforma trabalhista de 2017 prometeu milhões de empregos e o que mais cresceu foi a <strong>informalidade e a "pejotização"</strong>. Direito não é custo — é o que garante 13º, férias e aposentadoria. País com carteira assinada é país com consumo, previdência e futuro.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Aumentar o salário mínimo gera inflação e desemprego."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">O mínimo subiu acima da inflação e, no mesmo período, o desemprego caiu ao <strong>menor nível da série histórica</strong>. Salário na mão do trabalhador vira pão, aluguel e mercado — gira a economia da ponta. Quem trava emprego é juro alto e falta de investimento, não o salário do pobre.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"CLT é coisa do passado. O futuro é cada um ser 'seu próprio patrão'."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">"Empreendedor" sem direito é trabalhador sem rede. Sem 13º, sem férias, sem FGTS e sem aposentadoria, <strong>o risco todo fica com você e o lucro com a plataforma</strong>. Liberdade de verdade é poder adoecer sem passar fome — e isso só o direito garante.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">8</span>
+  </div>
+</section>
+
+<!-- CAP 1 · conteúdo C: mitos 4-5 + frases -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 01 · Trabalho e Emprego</span><span class="star">★</span></div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Quem está desempregado é porque não corre atrás, não quer trabalhar."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Desemprego é problema de <strong>economia, não de preguiça</strong>. Quando o país investe e cresce, a vaga aparece — e foi o que se viu quando o emprego formal bateu recorde. Culpar o trabalhador é tirar a conta de quem governa e de quem lucra demitindo.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Sindicato só atrapalha e tira dinheiro do trabalhador."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Foi a luta sindical que conquistou <strong>férias, 13º e jornada de 8 horas</strong> — nada disso caiu do céu nem foi bondade de patrão. Onde o trabalhador é organizado, o salário é maior. Patrão adora trabalhador sozinho: é mais fácil pagar pouco a quem está sem ninguém do lado.</div>
+  </div>
+
+  <div class="frasebox-title"><span class="star">★</span> Frases prontas pro debate</div>
+  <div class="frases">
+    <div class="frase"><span class="star">★</span> Direito trabalhista não é custo: é dignidade.</div>
+    <div class="frase"><span class="star">★</span> Quem constrói este país é quem tem calo na mão — e merece carteira assinada.</div>
+    <div class="frase"><span class="star">★</span> Salário mínimo que sobe é mercado cheio no fim do mês.</div>
+    <div class="frase"><span class="star">★</span> A "liberdade" da direita é a liberdade de trabalhar sem direito nenhum.</div>
+    <div class="frase"><span class="star">★</span> Sem CLT, o risco é seu e o lucro é do patrão.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">9</span>
+  </div>
+</section>
+
+<!-- ===================== CAP 2 · ABERTURA ===================== -->
+<section class="page dark chapter-open">
+  <div class="starwm" style="font-size:300pt; left:-30mm; bottom:-25mm;">★</div>
+  <div class="co-label">★ Capítulo Dois</div>
+  <div class="co-num">02</div>
+  <div class="co-bar"></div>
+  <h2>SAÚDE<br>E SUS</h2>
+  <p class="co-tese">Saúde não é mercadoria, é direito. O <b>SUS</b> é a maior política de inclusão do Brasil: atende do nascimento ao transplante, de graça, pra quem tem plano e pra quem nunca teve nada. Defender o SUS é defender a sua família na hora do aperto.</p>
+  <div class="co-list">
+    <div class="ci"><span class="star">★</span> A tese: saúde é direito de todos <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Os números do maior SUS do mundo <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> 5 mitos da direita, desmontados <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Frases prontas pro debate <span class="ln"></span></div>
+  </div>
+  <div class="footer footer--dark">
+    <span class="fb"><span class="star" style="color:var(--amarelo)">★</span> PovoJá</span>
+    <span class="pg">10</span>
+  </div>
+</section>
+
+<!-- CAP 2 · conteúdo A -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 02 · Saúde e SUS</span><span class="star">★</span></div>
+  <span class="kicker">A tese</span>
+  <h2 class="title">O SUS é seu —<br>mesmo que você nunca tenha usado</h2>
+  <p class="lead">Toda vez que você toma uma vacina, liga pro SAMU, faz um exame, ganha um remédio na farmácia popular ou come num restaurante com vigilância sanitária, o <span class="hl">SUS está ali</span>. Ele é o único sistema do mundo que se propõe a cuidar de mais de 200 milhões de pessoas de graça. Não existe "saúde só pra quem paga" num país decente — existe saúde como direito.</p>
+  <p>Plano de saúde cobre o que dá lucro e nega o que dá despesa. O SUS faz o que plano nenhum faz: <strong>transplante, tratamento de câncer, parto de risco, queimadura grave, HIV</strong>. Por isso, na emergência, até quem tem plano cai no SUS. Sucatear o SUS não é "economia": é empurrar a conta da doença pra cima das famílias mais pobres.</p>
+
+  <div class="numeros">
+    <div class="nh"><span class="star">★</span> Os Números</div>
+    <ul>
+      <li><span class="big">1988</span><span>A Constituição garantiu que <b>"saúde é direito de todos e dever do Estado"</b> (art. 196). O SUS foi regulamentado pela Lei 8.080 de 1990. <i>Fonte: Constituição Federal de 1988; Lei nº 8.080/1990.</i></span></li>
+      <li><span class="big">1º</span><span>O SUS é o <b>maior sistema público de saúde universal e gratuito do mundo</b>. <i>Fonte: Ministério da Saúde.</i></span></li>
+      <li><span class="big">~150 mi</span><span>Brasileiros dependem <b>exclusivamente do SUS</b> — não têm plano de saúde. <i>Fonte: Ministério da Saúde / ANS. <span class="conferir">[conferir fonte]</span></i></span></li>
+      <li><span class="big">+90%</span><span>Dos <b>transplantes</b> feitos no Brasil acontecem pelo SUS — o maior sistema público de transplantes do planeta. <i>Fonte: Ministério da Saúde / ABTO.</i></span></li>
+      <li><span class="big">1973</span><span>Ano do <b>Programa Nacional de Imunizações (PNI)</b>, referência mundial, que oferece as vacinas do calendário de graça. <i>Fonte: Ministério da Saúde.</i></span></li>
+    </ul>
+    <div class="fonte">O Brasil erradicou a varíola e eliminou a poliomielite (último caso em 1989) — graças à vacinação pública.</div>
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">11</span>
+  </div>
+</section>
+
+<!-- CAP 2 · conteúdo B: mitos 1-3 -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 02 · Saúde e SUS</span><span class="star">★</span></div>
+  <span class="kicker">O que a direita diz</span>
+  <h2 class="title">Os mitos,<br>desmontados</h2>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"SUS não funciona, é só fila e descaso. Não adianta colocar dinheiro."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">O SUS faz o que plano nenhum faz: <strong>vacina, SAMU, transplante, câncer e HIV de graça</strong>. A fila existe porque foi sucateado e subfinanciado — inclusive com o congelamento de gastos. A solução é investir, não acabar. Quem fala em privatizar quer transformar sua doença no lucro de alguém.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Saúde privada é melhor. Quem quiser que pague plano."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Quando o caso é grave de verdade — transplante, AVC, queimadura, parto de risco — é o <strong>SUS que segura</strong>. Até quem tem plano cai no SUS na emergência, porque plano nega cobertura cara. Saúde só pra quem pode pagar não é saúde: é privilégio com data de validade.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Vacina é experimento, faz mal, tem que ser opcional."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Vacina <strong>erradicou a varíola e tirou a pólio do Brasil</strong>. Na pandemia, foi vacina que salvou centenas de milhares de vidas — e o atraso em comprá-la custou caro. Quem ataca vacina não está defendendo "liberdade": está brincando com a vida das crianças e o retorno de doenças que já tinham sumido.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">12</span>
+  </div>
+</section>
+
+<!-- CAP 2 · conteúdo C: mitos 4-5 + frases -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 02 · Saúde e SUS</span><span class="star">★</span></div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Gastar com SUS é jogar dinheiro fora."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Cada real no SUS <strong>volta em vida salva e em gente trabalhando</strong> em vez de adoecendo. Sem SUS, uma doença vira a falência da família inteira. O verdadeiro desperdício é deixar o povo morrer na porta do hospital por falta de médico, leito e remédio que custariam bem menos.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Programa de levar médico pra periferia é só propaganda, traz gente despreparada."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Esses programas levaram médico <strong>pra onde nenhum queria ir</strong>: interior, periferia e aldeia. Para milhões de brasileiros, foi a primeira vez que um médico chegou perto de casa. Atendimento perto evita que doença simples vire emergência cara — e salva vida no lugar onde o Estado nunca tinha chegado.</div>
+  </div>
+
+  <div class="frasebox-title"><span class="star">★</span> Frases prontas pro debate</div>
+  <div class="frases">
+    <div class="frase"><span class="star">★</span> O SUS é o maior programa de inclusão do Brasil — e é seu.</div>
+    <div class="frase"><span class="star">★</span> Plano de saúde não faz transplante de graça. O SUS faz.</div>
+    <div class="frase"><span class="star">★</span> Vacina salva. Quem é contra brinca com a vida das crianças.</div>
+    <div class="frase"><span class="star">★</span> Fila no SUS é falta de verba — não desculpa pra privatizar.</div>
+    <div class="frase"><span class="star">★</span> Saúde é direito, não mercadoria.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">13</span>
+  </div>
+</section>
+
+<!-- ===================== CAP 3 · ABERTURA ===================== -->
+<section class="page dark chapter-open">
+  <div class="starwm" style="font-size:300pt; right:-35mm; bottom:-20mm;">★</div>
+  <div class="co-label">★ Capítulo Três</div>
+  <div class="co-num">03</div>
+  <div class="co-bar"></div>
+  <h2>EDUCAÇÃO</h2>
+  <p class="co-tese">Educação pública é o <b>elevador social do povo</b>. Foi a escola e a universidade pública que botaram filho de trabalhador pra ser médico, professor e engenheiro. A direita corta verba e ataca cota porque tem medo do povo pensando. Conhecimento é poder — e o povo quer poder.</p>
+  <div class="co-list">
+    <div class="ci"><span class="star">★</span> A tese: estudar é poder <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Os números das cotas e da ciência <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> 5 mitos da direita, desmontados <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Frases prontas pro debate <span class="ln"></span></div>
+  </div>
+  <div class="footer footer--dark">
+    <span class="fb"><span class="star" style="color:var(--amarelo)">★</span> PovoJá</span>
+    <span class="pg">14</span>
+  </div>
+</section>
+
+<!-- CAP 3 · conteúdo A -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 03 · Educação</span><span class="star">★</span></div>
+  <span class="kicker">A tese</span>
+  <h2 class="title">Quem tem medo de<br>povo estudado?</h2>
+  <p class="lead">A educação pública é a chave que abre a porta que o berço fechou. Foi ela que pegou o filho da empregada, do pedreiro, do lavrador e devolveu professor, enfermeira, advogado. Por isso a esquerda defende <span class="hl">escola pública forte, universidade gratuita, cota pra corrigir a largada e ciência com dinheiro de verdade</span>. Não é gasto: é o melhor investimento que um país pobre pode fazer.</p>
+  <p>Quem ataca a universidade pública, corta bolsa de pesquisa e espalha que "professor doutrina" não quer um país mais inteligente — quer um povo mais fácil de enganar. <strong>Gente que estuda pensa por conta própria</strong>, e isso assusta quem só ganha voto com mentira e medo.</p>
+
+  <div class="numeros">
+    <div class="nh"><span class="star">★</span> Os Números</div>
+    <ul>
+      <li><span class="big">2012</span><span>A <b>Lei de Cotas</b> reservou metade das vagas nas universidades e institutos federais para escola pública, pretos, pardos, indígenas e baixa renda. <i>Fonte: Lei nº 12.711/2012 (atualizada pela Lei nº 14.723/2023).</i></span></li>
+      <li><span class="big">=/+</span><span>Cotistas têm desempenho <b>igual ou superior</b> ao dos não cotistas, segundo pesquisas das próprias universidades. <i>Fonte: estudos de universidades federais. <span class="conferir">[conferir fonte]</span></i></span></li>
+      <li><span class="big">2008</span><span>Criação dos <b>Institutos Federais</b>, que levaram ensino técnico e superior gratuito ao interior do país. <i>Fonte: Lei nº 11.892/2008.</i></span></li>
+      <li><span class="big">+90%</span><span>Da <b>ciência brasileira</b> é produzida em universidades públicas. <i>Fonte: MCTI / CGEE. <span class="conferir">[conferir fonte]</span></i></span></li>
+      <li><span class="big">Pública</span><span>Vacina (Butantan, Fiocruz), pré-sal (Petrobras) e agricultura tropical (Embrapa) saíram de <b>instituições públicas de pesquisa</b>. <i>Fonte: instituições citadas.</i></span></li>
+    </ul>
+    <div class="fonte">O ProUni (Lei 11.096/2005) já garantiu milhões de bolsas em faculdades particulares para estudantes de baixa renda.</div>
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">15</span>
+  </div>
+</section>
+
+<!-- CAP 3 · conteúdo B: mitos 1-3 -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 03 · Educação</span><span class="star">★</span></div>
+  <span class="kicker">O que a direita diz</span>
+  <h2 class="title">Os mitos,<br>desmontados</h2>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Cota é injustiça. O certo é entrar só por mérito."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Mérito de quem estudou em escola cara, com cursinho e internet, contra quem trabalhou desde criança, <strong>não é a mesma corrida</strong>. A cota corrige a largada, não dá o prêmio. E o resultado está nos dados: o cotista entra, se forma e tem desempenho igual ou melhor.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Universidade pública é cheia de filho de rico e de doutrinação."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">A cota mudou a cara da universidade: hoje ela tem <strong>a cor e a renda do povo brasileiro</strong>. "Doutrinação" é a desculpa de quem tem medo de gente que aprende a pensar por conta própria. Ensinar a questionar não é doutrinar — doutrina é exigir que ninguém questione.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Faculdade não serve pra nada. O que vale é trabalhar cedo."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">País que investe em educação é país que cresce. Foi <strong>pesquisa pública</strong> que fez o avião, o pré-sal, a vacina e a agricultura que alimenta o mundo. Quem despreza o estudo quer o povo sem ferramenta pra subir — e mão de obra barata pra sempre.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">16</span>
+  </div>
+</section>
+
+<!-- CAP 3 · conteúdo C: mitos 4-5 + frases -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 03 · Educação</span><span class="star">★</span></div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Tem que privatizar a universidade pra ela ficar eficiente."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">As <strong>melhores universidades do Brasil são públicas e gratuitas</strong> — e lideram os rankings da América Latina. Privatizar é trocar diploma por dívida de estudante e fechar a porta pro filho do trabalhador. Cobrar pra estudar não deixa ninguém mais eficiente: só mais pobre.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Cortar verba de pesquisa e de bolsa é economia pro país."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Cortar ciência é <strong>parar o país</strong>. Sem bolsa e sem laboratório, o cérebro brasileiro vai embora e passamos a comprar caro do exterior o que sabíamos fazer. Economia de tostão hoje, prejuízo de bilhão amanhã. Ciência é soberania: quem não pesquisa, obedece.</div>
+  </div>
+
+  <div class="frasebox-title"><span class="star">★</span> Frases prontas pro debate</div>
+  <div class="frases">
+    <div class="frase"><span class="star">★</span> Educação pública é o elevador social do povo.</div>
+    <div class="frase"><span class="star">★</span> Cota não é privilégio: é corrigir a largada de uma corrida desigual.</div>
+    <div class="frase"><span class="star">★</span> As melhores universidades do Brasil são públicas e gratuitas.</div>
+    <div class="frase"><span class="star">★</span> Quem corta verba de ciência quer o povo sem ferramenta pra subir.</div>
+    <div class="frase"><span class="star">★</span> Tem medo de povo estudado quem precisa de povo enganado.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">17</span>
+  </div>
+</section>
+
+<!-- ===================== CAP 4 · ABERTURA ===================== -->
+<section class="page dark chapter-open">
+  <div class="starwm" style="font-size:300pt; left:-30mm; top:-25mm;">★</div>
+  <div class="co-label">★ Capítulo Quatro</div>
+  <div class="co-num">04</div>
+  <div class="co-bar"></div>
+  <h2>ECONOMIA E<br>CUSTO DE VIDA</h2>
+  <p class="co-tese">Economia boa é a que <b>cabe no prato e no fim do mês</b>. Não adianta "bolsa subindo" se falta arroz. A esquerda mede a economia pelo que importa: emprego, comida na mesa, salário que compra e fome diminuindo. A conta da direita sempre sobra pro pobre.</p>
+  <div class="co-list">
+    <div class="ci"><span class="star">★</span> A tese: economia se mede no prato <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Os números da fome e da desigualdade <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> 5 mitos da direita, desmontados <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Frases prontas pro debate <span class="ln"></span></div>
+  </div>
+  <div class="footer footer--dark">
+    <span class="fb"><span class="star" style="color:var(--amarelo)">★</span> PovoJá</span>
+    <span class="pg">18</span>
+  </div>
+</section>
+
+<!-- CAP 4 · conteúdo A -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 04 · Economia e Custo de Vida</span><span class="star">★</span></div>
+  <span class="kicker">A tese</span>
+  <h2 class="title">A economia que<br>importa é a do prato</h2>
+  <p class="lead">Tem economia que vai bem na manchete e mal na cozinha. Pra quem ganha pouco, "a economia" é uma só: <span class="hl">tem comida na mesa? o salário paga o aluguel? sobra pro fim do mês?</span> A esquerda parte daí. Combater a fome, segurar o preço do alimento, valorizar o salário mínimo e proteger quem está embaixo não é "gastança": é o dever mínimo de um país que se respeita.</p>
+  <p>A inflação que mais machuca é a do <strong>arroz, do gás e da luz</strong> — e ela é puxada por dólar, juro e clima, não pelo prato do pobre. Quando a direita fala em "segurar gasto", o corte cai sempre na saúde, na escola e no benefício. Nunca no lucro do banco. <strong>A conta vem invertida de propósito.</strong></p>
+
+  <div class="numeros">
+    <div class="nh"><span class="star">★</span> Os Números</div>
+    <ul>
+      <li><span class="big">33 mi</span><span>Brasileiros passavam <b>fome</b> (insegurança alimentar grave) em 2022; mais de 125 milhões viviam com algum grau de insegurança alimentar. <i>Fonte: Rede PENSSAN — II VIGISAN, 2022.</i></span></li>
+      <li><span class="big">2014</span><span>Ano em que o Brasil <b>saiu do Mapa da Fome da ONU</b> pela primeira vez — antes de voltar a ele no fim da década passada. <i>Fonte: FAO / ONU.</i></span></li>
+      <li><span class="big">R$ 600</span><span>Piso do <b>Bolsa Família</b> retomado em 2023, com R$ 150 a mais por criança de até 6 anos. <i>Fonte: Ministério do Desenvolvimento e Assistência Social, 2023.</i></span></li>
+      <li><span class="big">10,06%</span><span>Inflação (IPCA) de <b>2021</b>; em 2024 ficou em torno de 4,8%. <i>Fonte: IBGE / IPCA. <span class="conferir">[conferir valor de 2024]</span></i></span></li>
+      <li><span class="big">~1/4</span><span>Da renda do país fica nas mãos do <b>1% mais rico</b> — um dos piores índices de desigualdade do mundo. <i>Fonte: World Inequality Report. <span class="conferir">[conferir fonte/ano]</span></i></span></li>
+    </ul>
+    <div class="fonte">A cesta básica é acompanhada mensalmente pelo DIEESE: quando ela sobe mais que o salário, o trabalhador empobrece mesmo "trabalhando direitinho".</div>
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">19</span>
+  </div>
+</section>
+
+<!-- CAP 4 · conteúdo B: mitos 1-3 -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 04 · Economia e Custo de Vida</span><span class="star">★</span></div>
+  <span class="kicker">O que a direita diz</span>
+  <h2 class="title">Os mitos,<br>desmontados</h2>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Bolsa Família é esmola pra vagabundo não querer trabalhar."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">A maioria de quem recebe <strong>trabalha</strong> — e o programa exige escola e vacina das crianças. O dinheiro vira compra no mercado do bairro e gira a economia local. Combater a fome não é gasto: é o básico de um país decente. Quem chama pobre de vagabundo nunca passou fome.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Governo gastando com pobre é o que gera a inflação."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">A inflação que mais dói é a do <strong>alimento e da energia</strong>, puxada por dólar, juro e clima — não pelo prato do trabalhador. Tirar comida da mesa do pobre pra "segurar a inflação" é fazer o mais fraco pagar uma conta que não é dele. Inflação se combate sem fome.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Imposto é alto porque o pobre recebe benefício demais."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Quem mais paga imposto, proporcionalmente, é o <strong>pobre</strong>: está embutido no arroz, no gás e na luz. Lucro e dividendo de milionário, esse sim, paga pouco ou nada. O problema não é o benefício de quem tem pouco — é a conta invertida que protege quem tem muito.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">20</span>
+  </div>
+</section>
+
+<!-- CAP 4 · conteúdo C: mitos 4-5 + frases -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 04 · Economia e Custo de Vida</span><span class="star">★</span></div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Congelar o gasto público é só 'organizar a casa'."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">O teto de gastos congelou <strong>saúde e educação</strong> enquanto a população crescia e envelhecia. "Organizar a casa" cortando o remédio e a merenda é arrumar o andar de cima e arrombar o do térreo. Equilíbrio que tira do pobre e blinda o rico não é responsabilidade: é escolha de lado.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"É só deixar o mercado livre que a economia resolve sozinha."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">"Mercado livre" sozinho deu <strong>despejo, gás a preço de ouro e fila do osso</strong>. Quem tirou gente da fome foi política pública: salário mínimo valorizado, Bolsa Família e comida na escola. Mercado não tem dó — ele busca lucro. Quem cuida do povo é o povo organizado e um Estado do lado certo.</div>
+  </div>
+
+  <div class="frasebox-title"><span class="star">★</span> Frases prontas pro debate</div>
+  <div class="frases">
+    <div class="frase"><span class="star">★</span> Economia boa é a que cabe no prato.</div>
+    <div class="frase"><span class="star">★</span> Bolsa cheia na Faria Lima não enche barriga na periferia.</div>
+    <div class="frase"><span class="star">★</span> Combater a fome não é gasto: é o mínimo de um país decente.</div>
+    <div class="frase"><span class="star">★</span> Quem mais paga imposto é o pobre — está no arroz e no gás.</div>
+    <div class="frase"><span class="star">★</span> Mercado não tem dó. Povo organizado, sim.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">21</span>
+  </div>
+</section>
+
+<!-- ===================== CAP 5 · ABERTURA ===================== -->
+<section class="page dark chapter-open">
+  <div class="starwm" style="font-size:300pt; right:-32mm; top:-22mm;">★</div>
+  <div class="co-label">★ Capítulo Cinco</div>
+  <div class="co-num">05</div>
+  <div class="co-bar"></div>
+  <h2>DEMOCRACIA<br>E DIREITOS</h2>
+  <p class="co-tese">Democracia é <b>o povo mandando — e ninguém acima da lei</b>. Quem tentou dar golpe e rasgar a Constituição tem que responder, não ser anistiado. Direito de um não tira o direito de ninguém: igualdade, diversidade e comida na mesa fazem o país de todo mundo.</p>
+  <div class="co-list">
+    <div class="ci"><span class="star">★</span> A tese: lei igual pra todos <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Os números do golpe e dos direitos <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> 5 mitos da direita, desmontados <span class="ln"></span></div>
+    <div class="ci"><span class="star">★</span> Frases prontas pro debate <span class="ln"></span></div>
+  </div>
+  <div class="footer footer--dark">
+    <span class="fb"><span class="star" style="color:var(--amarelo)">★</span> PovoJá</span>
+    <span class="pg">22</span>
+  </div>
+</section>
+
+<!-- CAP 5 · conteúdo A -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 05 · Democracia e Direitos</span><span class="star">★</span></div>
+  <span class="kicker">A tese</span>
+  <h2 class="title">Sem democracia,<br>o povo não tem voz</h2>
+  <p class="lead">Foi com voto, voz e organização que o povo conquistou tudo o que tem — do direito de greve ao SUS, da aposentadoria à cota. Por isso a democracia não é "coisa de político": é a <span class="hl">ferramenta do povo</span>. E democracia tem uma regra de ouro: a lei vale pra todo mundo, até pra quem está no poder. Quem tentou rasgar a Constituição e anular o voto do povo tem que responder — não ser perdoado.</p>
+  <p>Direitos não se dividem como pizza: <strong>respeitar a mulher, o negro, o indígena e a pessoa LGBT não tira nada de ninguém</strong>. Só garante que todo mundo tenha o mesmo chão. Quem chama igualdade de "mimimi" é, quase sempre, quem se incomoda em perder um privilégio que nunca devia ter existido.</p>
+
+  <div class="numeros">
+    <div class="nh"><span class="star">★</span> Os Números</div>
+    <ul>
+      <li><span class="big">8/1</span><span>Em <b>8 de janeiro de 2023</b>, golpistas invadiram e depredaram o Congresso, o Planalto e o STF para tentar anular o resultado das urnas. <i>Fonte: registros oficiais / Polícia Federal, 2023.</i></span></li>
+      <li><span class="big">434</span><span>Mortos e desaparecidos políticos da <b>ditadura militar (1964–1985)</b>, além de milhares de torturados. <i>Fonte: Comissão Nacional da Verdade, 2014.</i></span></li>
+      <li><span class="big">1996</span><span>Ano em que a <b>urna eletrônica</b> começou a ser usada. Desde então, nunca houve fraude comprovada, mesmo com testes públicos. <i>Fonte: TSE.</i></span></li>
+      <li><span class="big">2013</span><span>O <b>casamento entre pessoas do mesmo sexo</b> passou a ser direito garantido em todo o país. <i>Fonte: Resolução nº 175/2013 do CNJ (a partir de decisão do STF de 2011).</i></span></li>
+      <li><span class="big">2006</span><span>A <b>Lei Maria da Penha</b>, reconhecida pela ONU como uma das melhores do mundo contra a violência à mulher. <i>Fonte: Lei nº 11.340/2006 / ONU Mulheres.</i></span></li>
+    </ul>
+    <div class="fonte">Democracia não é detalhe: é o que garante que você possa reclamar, votar e mudar de governo sem medo de bala.</div>
+  </div>
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">23</span>
+  </div>
+</section>
+
+<!-- CAP 5 · conteúdo B: mitos 1-3 -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 05 · Democracia e Direitos</span><span class="star">★</span></div>
+  <span class="kicker">O que a direita diz</span>
+  <h2 class="title">Os mitos,<br>desmontados</h2>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"8 de janeiro foi manifestação pacífica. Tem que anistiar todo mundo."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Quebrar o Congresso, o STF e o Planalto pra anular uma eleição é <strong>tentativa de golpe — crime, não protesto</strong>. Anistiar golpista é assinar o convite pro próximo golpe. Quem atenta contra a democracia e contra o seu voto tem que responder na Justiça.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"A urna é fraudada. Por isso a esquerda ganha."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">A urna é <strong>auditada, testada na frente de todo mundo e usada há quase 30 anos sem uma fraude provada</strong> — inclusive a direita ganhou milhares de eleições nela. Quem grita "fraude" sem apresentar prova só prepara a desculpa pra não aceitar a derrota.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Direitos humanos é coisa pra defender bandido."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Direitos humanos é o que impede que <strong>você</strong> seja preso sem prova, torturado ou morto sem julgamento. É proteção pra todo mundo — principalmente pro pobre e pro negro, que mais sofrem com o abuso. Quem é contra acha que isso nunca vai bater na porta da própria casa.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">24</span>
+  </div>
+</section>
+
+<!-- CAP 5 · conteúdo C: mitos 4-5 + frases -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Cap. 05 · Democracia e Direitos</span><span class="star">★</span></div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"Essa pauta de diversidade é 'mimimi' e só divide o país."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">Respeitar mulher, negro, indígena e LGBT <strong>não tira nada de ninguém</strong> — só garante a todos os mesmos direitos. Quem divide o país é quem prega ódio contra quem é diferente. Igualdade não é favor: é o mínimo. E quem chama isso de "mimimi" só tem medo de perder privilégio.</div>
+  </div>
+
+  <div class="confronto">
+    <div class="tag tag-mito"><span class="mk">✕</span> MITO</div>
+    <div class="body-mito">"A ditadura foi boa: tinha ordem e não tinha corrupção."</div>
+    <div class="tag tag-verdade"><span class="mk">✓</span> VERDADE</div>
+    <div class="body-verdade">A ditadura <strong>censurou, torturou, matou e endividou o país</strong> — e fez tudo isso na surdina, sem imprensa livre pra fiscalizar. Sem voto e sem jornal, não tinha "honestidade": tinha medo de denunciar. Saudade de ditadura é saudade de um tempo em que o povo não podia falar.</div>
+  </div>
+
+  <div class="frasebox-title"><span class="star">★</span> Frases prontas pro debate</div>
+  <div class="frases">
+    <div class="frase"><span class="star">★</span> Golpista não se anistia: golpista responde.</div>
+    <div class="frase"><span class="star">★</span> A urna é segura há quase 30 anos. Quem grita "fraude" não tem prova.</div>
+    <div class="frase"><span class="star">★</span> Direitos humanos protegem você também.</div>
+    <div class="frase"><span class="star">★</span> Igualdade não tira direito de ninguém — só incomoda quem tem privilégio.</div>
+    <div class="frase"><span class="star">★</span> Democracia é o povo com voz, voto e barriga cheia.</div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">25</span>
+  </div>
+</section>
+
+<style>
+/* ---------- DOSSIÊ ---------- */
+.dossie-intro{
+  background:var(--vermelho); color:var(--creme);
+  padding:13px 16px; margin:2px 0 15px; border-left:7px solid var(--amarelo);
+  font-size:11pt; line-height:1.46;
+}
+.dossie-intro b{ color:var(--amarelo); }
+.dossie-item{
+  display:flex; gap:0; margin-bottom:11px;
+  border:1px solid rgba(12,4,5,.18); background:#fff;
+}
+.di-num{
+  background:var(--preto); color:var(--amarelo);
+  font-family:'Anton', sans-serif; font-size:19pt;
+  flex:0 0 40px; display:flex; align-items:center; justify-content:center;
+}
+.di-body{ padding:9px 14px 10px; }
+.di-fake{
+  color:var(--vermelho); font-weight:700; font-style:italic;
+  font-size:10.5pt; line-height:1.32; margin-bottom:5px;
+  display:flex; gap:7px; align-items:baseline;
+}
+.di-fake .x{ font-style:normal; font-family:'Anton',sans-serif; }
+.di-resp{ font-size:10pt; line-height:1.4; }
+.di-resp .rtag{ font-weight:800; color:var(--preto); letter-spacing:1px; font-size:8.2pt; margin-right:5px; }
+.di-resp b{ color:var(--vermelho); }
+</style>
+
+<!-- ===================== DOSSIÊ (p.1) ===================== -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Dossiê · Como responder ao bolsonarismo</span><span class="star">★</span></div>
+  <span class="kicker">Munição de resposta rápida</span>
+  <h2 class="title">Eles mentem.<br>Você responde.</h2>
+  <div class="dossie-intro">O bolsonarismo venceu muita gente na base da <b>repetição de mentira</b>. A resposta é repetir a verdade, curta e sem medo. Decore as que mais aparecem no seu grupo — e cole na hora.</div>
+
+  <div class="dossie-item">
+    <div class="di-num">01</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "A urna eletrônica é fraudada."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> A urna é testada em público e auditada há quase <b>30 anos</b>, com zero fraude provada — e a direita venceu milhares de eleições nela. "Fraude" sem prova é só desculpa de quem não aceita perder.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">02</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "A esquerda vai transformar o Brasil numa Venezuela."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Lula governou 8 anos com eleição, imprensa livre e mercado cheio — e o país <b>saiu do Mapa da Fome</b>. "Venezuela" é terrorismo verbal pra te assustar e esconder a falta de proposta.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">03</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Bolsa Família é dinheiro pra vagabundo."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> É comida na mesa de família que <b>trabalha</b> e que precisa pôr a criança na escola e na vacina. Esse dinheiro volta como compra no comércio do bairro. Quem chama pobre de vagabundo nunca passou fome.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">04</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Comunista quer tomar sua casa e sua geladeira."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Ninguém vai tomar a casa de quem ralou a vida toda. Isso é <b>fantasma da Guerra Fria</b> pra esconder quem realmente tira de você: juro de banco e patrão que não paga direito.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">26</span>
+  </div>
+</section>
+
+<!-- ===================== DOSSIÊ (p.2) ===================== -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Dossiê · Como responder ao bolsonarismo</span><span class="star">★</span></div>
+
+  <div class="dossie-item">
+    <div class="di-num">05</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Tem 'kit gay' e mamadeira nas escolas."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Mentira já <b>desmentida por checadores e pela Justiça</b>: nunca existiu. É fake news fabricada pra ganhar voto no medo. Na escola, o que falta de verdade é merenda, professor e livro.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">06</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Lula é ladrão, foi preso."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> As condenações foram <b>anuladas pela Justiça</b>, que reconheceu parcialidade no processo. Foi preso e solto sem prova que se sustentasse. Repetir "ladrão" é ignorar de propósito a decisão da própria Justiça.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">07</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "A esquerda é contra Deus e contra a família."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Tem evangélico, católico e gente de terreiro na luta popular há décadas. Usar a fé pra defender <b>privilégio de rico e ódio ao pobre</b> é que não combina com Deus nenhum. Fé de verdade dá comida, não dá medo.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">08</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Direitos humanos é pra defender bandido."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Direitos humanos é o que impede a polícia de te matar sem julgamento e o patrão de te tratar como escravo. É <b>proteção sua</b> — você só não percebe porque ainda não precisou.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">27</span>
+  </div>
+</section>
+
+<!-- ===================== DOSSIÊ (p.3) ===================== -->
+<section class="page content">
+  <div class="toprule"><span class="cap">★ Dossiê · Como responder ao bolsonarismo</span><span class="star">★</span></div>
+
+  <div class="dossie-item">
+    <div class="di-num">09</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Globalismo e nova ordem mundial controlam tudo."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Teoria de conspiração não paga conta nem enche prato. Enquanto te assustam com "globalismo", sobe o gás e <b>congela o seu salário</b>. É cortina de fumaça pra você olhar pro lado errado.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">10</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Imposto é alto por causa de gasto com pobre."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> O imposto que te sufoca está no arroz, no gás e na luz — e o pobre paga, proporcionalmente, <b>mais que o rico</b>. Dividendo de milionário é que paga pouco. A conta está invertida de propósito.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">11</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "Mais armas na mão do povo é mais segurança."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Mais arma em circulação é mais tragédia em briga de bar, em casa e no trânsito — <b>não menos crime</b>. Segurança se faz com polícia bem paga, investigação e emprego, não com cada um por si armado.</div>
+    </div>
+  </div>
+  <div class="dossie-item">
+    <div class="di-num">12</div>
+    <div class="di-body">
+      <div class="di-fake"><span class="x">✕</span> "A mídia e o STF perseguem a direita."</div>
+      <div class="di-resp"><span class="rtag">RESPONDA:</span> Responder por crime não é perseguição: é <b>lei igual pra todos</b>. Quando a esquerda era presa, era "Justiça"; agora que a direita responde, virou "perseguição"? Lei vale pra todo mundo — ou não é lei.</div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:6px;">Não precisa responder com ódio. Responda com <strong>dado, calma e repetição</strong>. Quem assiste em silêncio é quem você convence — e é quem decide a eleição.</div>
+
+  <div class="footer">
+    <span class="fb"><span class="star">★</span> PovoJá</span>
+    <span class="pg">28</span>
+  </div>
+</section>
+
+<!-- ===================== PÁGINA FINAL ===================== -->
+<section class="page dark final">
+  <div class="starwm" style="font-size:380pt; left:50%; top:50%; transform:translate(-50%,-50%);">★</div>
+  <div class="f-star">★</div>
+  <h1>O POVO UNIDO<br>JAMAIS SERÁ<br><span class="yellow">VENCIDO</span></h1>
+  <p class="f-sub">Você agora tem a munição. Mas argumento guardado na gaveta não muda nada. <strong>Espalhe.</strong> Manda no grupo da família, posta no story, comenta no vídeo do tio. A direita é barulhenta porque a gente fica calado — chegou a hora de virar o jogo.</p>
+  <div class="f-cta">★ Entre no grupo do PovoJá — é grátis</div>
+  <p class="f-share">Grupo gratuito no <strong>WhatsApp</strong> e no <strong>Telegram</strong>: conteúdo novo toda semana, cards e vídeos prontos pra postar. Sem spam, saia quando quiser. <br>Gostou deste guia? <strong>Compartilhe</strong> com cinco pessoas hoje. É assim que a verdade vira maioria.</p>
+  <div class="f-brand">
+    <div class="bn">POVO<span class="ja"> JÁ</span></div>
+    <div class="sl">★ Trabalho, Justiça e Poder Popular</div>
+  </div>
+</section>
+
+</body>
+</html>
+</body>
+</html>
