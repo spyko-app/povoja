@@ -1,11 +1,6 @@
-"use client";
-
 import { products } from "../lib/data";
-import { useCheckout } from "./Checkout";
 
 export default function Products() {
-  const { open } = useCheckout();
-
   return (
     <section className="section products-section" id="produtos">
       <div className="container">
@@ -49,18 +44,12 @@ export default function Products() {
                     <b>{p.price}</b>
                     {p.priceOld && <s>{p.priceOld}</s>}
                   </div>
-                  <button
+                  <a
                     className="btn btn-vermelho btn-block"
-                    onClick={() =>
-                      open({
-                        name: p.name,
-                        price: p.price,
-                        priceOld: p.priceOld,
-                      })
-                    }
+                    href={p.checkoutUrl || "#"}
                   >
                     Comprar {p.price}
-                  </button>
+                  </a>
                 </div>
               </div>
             </article>

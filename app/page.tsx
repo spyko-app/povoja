@@ -1,4 +1,3 @@
-import { CheckoutProvider } from "./components/Checkout";
 import Header from "./components/Header";
 import Hero, { Marquee } from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
@@ -17,7 +16,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <CheckoutProvider>
+    <>
       <Header />
       <main>
         <Hero />
@@ -36,6 +35,6 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
-    </CheckoutProvider>
+    </>
   );
 }

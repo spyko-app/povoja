@@ -1,11 +1,6 @@
-"use client";
-
 import { plans } from "../lib/data";
-import { useCheckout } from "./Checkout";
 
 export default function Plans() {
-  const { open } = useCheckout();
-
   return (
     <section className="section plans-section" id="kit-completo">
       <div className="container">
@@ -46,20 +41,14 @@ export default function Plans() {
                 ))}
               </ul>
 
-              <button
+              <a
                 className={`btn btn-block btn-lg ${
                   plan.featured ? "btn-amarelo" : "btn-vermelho"
                 }`}
-                onClick={() =>
-                  open({
-                    name: plan.name,
-                    price: plan.price,
-                    priceOld: plan.priceOld,
-                  })
-                }
+                href={plan.checkoutUrl || "#"}
               >
                 Quero esse →
-              </button>
+              </a>
             </article>
           ))}
         </div>

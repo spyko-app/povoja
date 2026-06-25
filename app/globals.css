@@ -356,9 +356,14 @@ li {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(8, 4, 5, 0.94);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--linha);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.brand-img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .header-inner {
@@ -404,13 +409,13 @@ li {
 .nav a {
   font-weight: 600;
   font-size: 0.96rem;
-  color: var(--tinta);
+  color: #fff;
   opacity: 0.85;
   transition: opacity 0.15s ease, color 0.15s ease;
 }
 .nav a:hover {
   opacity: 1;
-  color: var(--vermelho);
+  color: var(--amarelo);
 }
 
 .header-cta {
@@ -422,7 +427,7 @@ li {
 .header-count {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--vermelho);
+  color: #fff;
   text-align: right;
   line-height: 1.1;
 }
@@ -430,7 +435,7 @@ li {
   display: block;
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--tinta-suave);
+  color: rgba(255, 255, 255, 0.65);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -447,7 +452,7 @@ li {
 .burger span {
   width: 26px;
   height: 3px;
-  background: var(--vermelho);
+  background: #fff;
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -466,13 +471,14 @@ li {
   flex-direction: column;
   gap: 4px;
   padding: 14px 22px 24px;
-  border-bottom: 1px solid var(--linha);
-  background: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0c0405;
 }
 .mobile-nav a {
   padding: 12px 6px;
   font-weight: 700;
-  border-bottom: 1px solid var(--linha);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .mobile-nav .btn {
   margin-top: 12px;

@@ -1,11 +1,6 @@
-"use client";
-
 import { kits } from "../lib/data";
-import { useCheckout } from "./Checkout";
 
 export default function Kits() {
-  const { open } = useCheckout();
-
   return (
     <section className="section kits-section">
       <div className="container">
@@ -29,12 +24,9 @@ export default function Kits() {
                 <h3>{k.name}</h3>
                 <div className="kit-count">{k.count} peças</div>
                 <p>{k.desc}</p>
-                <button
-                  className="btn btn-amarelo btn-block"
-                  onClick={() => open({ name: k.name, price: "R$16,90" })}
-                >
+                <a className="btn btn-amarelo btn-block" href={k.checkoutUrl || "#"}>
                   Comprar R$16,90
-                </button>
+                </a>
               </div>
             </article>
           ))}

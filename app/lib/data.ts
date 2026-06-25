@@ -11,6 +11,7 @@ export type Product = {
   priceOld?: string;
   price: string;
   image?: string;
+  checkoutUrl?: string; // TODO: link da página de checkout
   featured?: boolean;
 };
 
@@ -66,6 +67,7 @@ export type Kit = {
   image: string;
   count: number;
   desc: string;
+  checkoutUrl?: string; // TODO: link da página de checkout
 };
 
 export const kits: Kit[] = [
@@ -86,6 +88,7 @@ export type Plan = {
   priceOld: string; // soma dos itens (preço cheio)
   price: string; // preço promocional
   save: string; // economia
+  checkoutUrl?: string; // TODO: link da página de checkout
   featured?: boolean;
 };
 

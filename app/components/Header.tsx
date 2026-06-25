@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { CountdownInline } from "./Countdown";
-import Logo from "./Logo";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
@@ -23,7 +22,8 @@ export default function Header() {
       <header className="header">
         <div className="container header-inner">
           <a href="#topo" className="brand-link" aria-label="PovoJá">
-            <Logo tone="red" size={30} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-povoja.png" alt="Povo Já" className="brand-img" />
           </a>
 
           <nav className="nav">
