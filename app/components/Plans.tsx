@@ -20,6 +20,12 @@ export default function Plans() {
               key={plan.id}
             >
               {plan.badge && <span className="plan-badge">{plan.badge}</span>}
+              {plan.image && (
+                <div className="plan-media">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={plan.image} alt={plan.name} />
+                </div>
+              )}
               <h3>{plan.name}</h3>
               <p className="plan-tagline">{plan.tagline}</p>
 

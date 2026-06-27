@@ -84,6 +84,7 @@ export type Plan = {
   name: string;
   tagline: string;
   badge?: string;
+  image?: string;
   features: PlanFeature[];
   priceOld: string; // soma dos itens (preço cheio)
   price: string; // preço promocional
@@ -97,6 +98,7 @@ export const plans: Plan[] = [
     id: "basico",
     name: "Kit Completo Básico",
     tagline: "Os 3 materiais essenciais pra começar a disputa nas redes.",
+    image: "/plan-basico.webp",
     features: [
       { label: "Ebook Arsenal de Argumentos", included: true },
       { label: "Pack de Cards", included: true },
@@ -114,6 +116,7 @@ export const plans: Plan[] = [
     name: "Kit Completo Premium",
     tagline: "Tudo num pacote só: o arsenal completo pra não parar nunca.",
     badge: "Mais popular",
+    image: "/plan-premium.webp",
     features: [
       { label: "Ebook Arsenal de Argumentos", included: true },
       { label: "Pack de Cards", included: true },
