@@ -23,11 +23,11 @@ export default function Hero() {
           </h1>
 
           <p className="hero-sub">
-            Ebook com argumentos que desmontam a direita, cards de resposta
-            rápida e vídeos prontos pro debate. A partir de R$13,90, com acesso
-            imediato.{" "}
+            Tenha resposta pra cada fake news da direita, defenda o SUS, o
+            trabalho e a democracia e vença o debate em qualquer rede — com dado
+            e verdade, na hora.{" "}
             <strong>
-              A extrema-direita tem milícia digital — a esquerda tem o povo
+              A extrema-direita tem milícia digital; a esquerda tem o povo
               organizado.
             </strong>
           </p>
