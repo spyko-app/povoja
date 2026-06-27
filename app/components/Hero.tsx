@@ -33,10 +33,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="#produtos" className="btn btn-amarelo btn-lg">
-              Ver produtos · R$13,90 →
-            </a>
-            <a href="#como-funciona" className="btn btn-outline-light btn-lg">
+            <a href="#como-funciona" className="btn btn-amarelo btn-lg">
               Como funciona
             </a>
           </div>

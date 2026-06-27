@@ -8,9 +8,14 @@ export default function FinalCTA() {
       <div className="container">
         <span className="eyebrow on-dark">★ A hora é agora</span>
         <h2 style={{ marginTop: 16 }}>O Brasil não pode esperar.</h2>
-        <p>
-          A extrema-direita já está nas redes todo santo dia. O povo também
-          precisa estar. Pegue sua munição e entre na disputa antes do 1º turno.
+        <p className="final-cta-lead">
+          <span className="l1">
+            A extrema-direita já está nas redes todo santo dia.
+          </span>
+          <span className="l2">
+            O povo também precisa estar. Pegue sua munição e entre na disputa
+            antes do 1º turno.
+          </span>
         </p>
         <CountdownBig />
         <div>

@@ -105,7 +105,7 @@ export const plans: Plan[] = [
       { label: "Pack de Vídeos", included: true },
       { label: "4 Kits temáticos (Trabalho, Saúde, Educação e Direitos)", included: false },
       { label: "Atualizações semanais por 1 ano", included: false },
-      { label: "Grupo VIP da militância", included: false },
+      { label: "Grupo VIP do POVO JÁ!", included: false },
     ],
     priceOld: "R$53,70",
     price: "R$43,90",
@@ -123,7 +123,7 @@ export const plans: Plan[] = [
       { label: "Pack de Vídeos", included: true },
       { label: "4 Kits temáticos (Trabalho, Saúde, Educação e Direitos)", included: true },
       { label: "Atualizações semanais por 1 ano", included: true },
-      { label: "Grupo VIP da militância", included: true },
+      { label: "Grupo VIP do POVO JÁ!", included: true },
     ],
     priceOld: "R$121,30",
     price: "R$79,90",
@@ -136,7 +136,7 @@ export type Step = { n: string; title: string; desc: string };
 
 export const steps: Step[] = [
   { n: "01", title: "Escolha o material", desc: "Ebook, cards, vídeos ou o kit completo. Você decide a munição que vai usar." },
-  { n: "02", title: "Baixe na hora", desc: "Pague com Pix ou cartão e receba o acesso na mesma hora, sem espera." },
+  { n: "02", title: "Baixe na hora", desc: "Ajude a comunidade se cadastrando e receba na mesma hora, sem espera." },
   { n: "03", title: "Poste e dispute", desc: "Publique nas redes e vença o debate com argumento, dado e verdade." },
 ];
 
@@ -201,7 +201,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Quem produz o conteúdo?",
-    a: "Uma equipe de comunicadores, jornalistas e militantes da causa popular. Tudo com revisão e dados de fontes oficiais, como IBGE, DIEESE e ministérios.",
+    a: "Uma equipe de comunicadores, jornalistas e ativistas da causa popular. Tudo com revisão e dados de fontes oficiais, como IBGE, DIEESE e ministérios.",
   },
   {
     q: "Com que frequência tem atualização?",
@@ -213,7 +213,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Meus dados estão seguros?",
-    a: "Sim. Seguimos a LGPD. Não vendemos nem compartilhamos seus dados com ninguém. Sua privacidade e a da militância vêm em primeiro lugar.",
+    a: "Sim. Seguimos a LGPD. Não vendemos nem compartilhamos seus dados com ninguém. Sua privacidade e a da comunidade vêm em primeiro lugar.",
   },
 ];
 

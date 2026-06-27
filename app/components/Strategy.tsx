@@ -10,7 +10,7 @@ export default function Strategy() {
             Tudo pra disputar as redes <span className="vermelho">num lugar só.</span>
           </h2>
           <p className="section-sub">
-            Seis frentes de combate digital pra organizar a militância e não dar
+            Seis frentes de combate digital pra organizar o povo e não dar
             sossego pra desinformação da direita.
           </p>
         </div>

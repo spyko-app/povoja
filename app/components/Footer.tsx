@@ -15,7 +15,7 @@ export default function Footer() {
             <p className="footer-about">
               Movimento independente de comunicação popular. Conteúdo pronto pra
               defender o trabalho, a saúde, a educação, os direitos e a
-              democracia nas redes. Feito pela militância, pro povo.
+              democracia nas redes. Feito pelo povo, pro povo.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 PovoJá · Feito pela militância, pro povo. ✊</span>
+          <span>© 2026 PovoJá · Feito pelo povo, pro povo. ✊</span>
           <span>O povo unido jamais será vencido.</span>
         </div>
         <p className="footer-disclaimer">

@@ -1,7 +1,7 @@
 /* ============================================================
    PovoJá — Arsenal de conteúdo popular
    Identidade: vermelho, branco e detalhes amarelos (estética
-   de cartaz militante / esquerda brasileira).
+   de cartaz popular / esquerda brasileira).
    ============================================================ */
 
 :root {
@@ -1522,6 +1522,26 @@ li {
   max-width: 600px;
   margin: 18px auto 30px;
   position: relative;
+}
+.final-cta .final-cta-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 840px;
+}
+.final-cta-lead .l1 {
+  font-family: var(--fonte-corpo);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 3.6vw, 2.1rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.final-cta-lead .l2 {
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.9vw, 1.7rem);
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.9);
+  text-wrap: balance;
 }
 
 /* Countdown */
